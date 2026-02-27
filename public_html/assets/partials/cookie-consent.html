@@ -1,0 +1,37 @@
+<div id="cookieConsent" class="cookie-consent hidden" role="dialog" aria-modal="true" aria-labelledby="cookieConsentTitle">
+    <div class="cookie-consent-card">
+        <button id="closeCookies" class="cookie-close" type="button" aria-label="Fechar">×</button>
+        <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+                <p id="cookieConsentTitle">Usamos cookies para melhorar sua experiência e analisar o tráfego. Ao continuar, você concorda com nossa <a href="/privacidade" target="_blank">Política de Privacidade</a>.</p>
+            </div>
+            <div class="cookie-consent-buttons">
+                <button id="rejectCookies" class="cookie-btn cookie-btn-reject" type="button">Rejeitar</button>
+                <button id="acceptCookies" class="cookie-btn cookie-btn-accept" type="button">Aceitar</button>
+                <button id="manageCookies" class="cookie-btn cookie-btn-manage" type="button">Gerenciar cookies</button>
+            </div>
+        </div>
+
+        <div id="cookieManage" class="cookie-manage hidden" role="dialog" aria-labelledby="cookieManageTitle">
+            <div class="cookie-manage-header">
+                <div id="cookieManageTitle" class="cookie-manage-title">Preferências</div>
+            </div>
+            <div class="cookie-manage-options" role="radiogroup" aria-label="Preferências de cookies">
+                <label class="cookie-switch">
+                    <input type="radio" name="cookiePref" value="essential" role="radio">
+                    <span class="cookie-switch-slider"></span>
+                    <span class="cookie-switch-label">Apenas essenciais</span>
+                </label>
+                <label class="cookie-switch">
+                    <input type="radio" name="cookiePref" value="all" role="radio">
+                    <span class="cookie-switch-slider"></span>
+                    <span class="cookie-switch-label">Todos</span>
+                </label>
+            </div>
+            <div class="cookie-manage-actions">
+                <button id="cancelManageCookies" class="cookie-btn cookie-btn-ghost" type="button">Cancelar</button>
+                <button id="saveManageCookies" class="cookie-btn cookie-btn-accept" type="button">Salvar</button>
+            </div>
+        </div>
+    </div>
+</div>

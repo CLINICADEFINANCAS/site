@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Preconnects for external resources (performance) -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://connect.facebook.net" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1223083836625980');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1223083836625980&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G5F9S04NGV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G5F9S04NGV');
+    </script>
+    <!-- End Google tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =========================
+         SEO + OG PARA A RAIZ (/)
+         ========================= -->
+    <title>Vektor Consultoria - Crescimento Estruturado</title>
+    <meta name="description" content="Estruturamos crescimento com método: Diagnóstico, Blueprint, RevOps e IA aplicada a negócios para operação previsível e escalável.">
+    <link rel="canonical" href="https://vektorconsultoria.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Vektor Consultoria">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:url" content="https://vektorconsultoria.com/">
+    <meta property="og:title" content="Vektor Consultoria - Crescimento Estruturado">
+    <meta property="og:description" content="Estruturamos crescimento com método: Diagnóstico, Blueprint, RevOps e IA aplicada a negócios para operação previsível e escalável.">
+    <meta property="og:image" content="https://vektorconsultoria.com/assets/images/og-vektor-consultoria.jpg?v=3">
+    <meta property="og:image:secure_url" content="https://vektorconsultoria.com/assets/images/og-vektor-consultoria.jpg?v=3">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vektor Consultoria - Crescimento Estruturado">
+    <meta name="twitter:description" content="Estruturamos crescimento com método: Diagnóstico, Blueprint, RevOps e IA aplicada a negócios para operação previsível e escalável.">
+    <meta name="twitter:image" content="https://vektorconsultoria.com/assets/images/og-vektor-consultoria.jpg?v=3">
+
+    <!-- External styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" crossorigin="anonymous">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/icone-vektor-consultoria.png">
+    <link rel="apple-touch-icon" href="/assets/images/icone-vektor-consultoria.png">
+
+    <!-- Partners-specific styles (scoped to page-parceiros) -->
+    <style>
+    /* Palette (as requested) */
+    /* black: #000000
+       deep-blue: #0B1E6D
+       cyan: #23E1E6
+       violet: #7A2CFF
+     */
+
+    /* Scope only when we mark body.page-parceiros */
+    body.page-parceiros {
+      background-color: #000000 !important;
+      color: #e6eef7;
+    }
+
+    /* Ensure partners section background is neutral (we'll style a panel) */
+    body.page-parceiros .partners-section {
+      background: transparent !important;
+      padding: 80px 0;
+    }
+
+    /* Gradient border panel */
+    body.page-parceiros .partners-panel {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1px; /* shows gradient border */
+      border-radius: 16px;
+      background: linear-gradient(90deg, #7A2CFF 0%, #23E1E6 100%);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+    }
+
+    body.page-parceiros .partners-panel-inner {
+      background: #000000;
+      border-radius: 15px;
+      padding: 40px;
+      color: #e6eef7;
+      overflow: visible;
+    }
+
+    /* Hero top with symbol and heading */
+    body.page-parceiros .partners-hero {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    body.page-parceiros .partners-symbol {
+      width: 96px;
+      height: 96px;
+      border-radius: 14px;
+      background: linear-gradient(90deg, #0B1E6D 0%, #23E1E6 100%);
+      box-shadow: 0 10px 30px rgba(11,30,77,0.45), inset 0 -8px 30px rgba(0,0,0,0.35);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-shrink:0;
+      outline: 1px solid rgba(122,44,255,0.06);
+    }
+    body.page-parceiros .partners-symbol img { width: 64%; height: auto; display:block; }
+
+    body.page-parceiros .partners-heading h1 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 800;
+      color: #cfe9ff;
+    }
+    body.page-parceiros .partners-heading .partners-accent {
+      color: #23E1E6;
+    }
+
+    body.page-parceiros .partners-heading .partners-subtitle {
+      margin: 8px 0 0;
+      color: rgba(35,225,230,0.95);
+      font-size: 15px;
+      max-width: 820px;
+      opacity: 0.95;
+    }
+
+    /* Partners carousel styling */
+    body.page-parceiros .partners-carousel-wrapper {
+      margin: 18px 0 36px;
+    }
+
+    /* Swiper container tweaks */
+    .partnersSwiper {
+      width: 100%;
+      padding: 18px 8px;
+      background: linear-gradient(180deg, rgba(122,44,255,0.03), rgba(35,225,230,0.02));
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+
+    .partnersSwiper .swiper-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Partner card inside slide */
+    body.page-parceiros .partner-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 84px;
+      padding: 16px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.03);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      transition: transform .28s ease, box-shadow .28s ease;
+      text-decoration: none;
+    }
+    body.page-parceiros .partner-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.65);
+    }
+    body.page-parceiros .partner-card img {
+      max-width: 100%;
+      max-height: 56px;
+      object-fit: contain;
+      filter: brightness(1.05) saturate(1.05);
+      display:block;
+    }
+
+    /* Partners CTA */
+    body.page-parceiros .partners-cta {
+      margin-top: 18px;
+      padding: 28px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, rgba(11,30,109,0.95) 0%, rgba(35,225,230,0.06) 100%);
+      text-align: center;
+      box-shadow: inset 0 8px 40px rgba(0,0,0,0.6);
+    }
+    body.page-parceiros .partners-cta h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      color: #e6eef7;
+      font-weight: 700;
+    }
+    body.page-parceiros .partners-cta p { color: rgba(230,238,247,0.9); margin: 0 0 16px; }
+    body.page-parceiros .partners-cta .partners-btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #23E1E6 0%, #7A2CFF 100%);
+      color: #041023;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(122,44,255,0.18);
+    }
+
+    /* Optional navigation arrows (subtle) */
+    body.page-parceiros .partners-nav {
+      margin-top: 12px;
+      display:flex;
+      gap:8px;
+      justify-content:center;
+      align-items:center;
+    }
+    body.page-parceiros .partners-nav .partners-arrow {
+      width:40px; height:40px; border-radius:999px;
+      display:inline-flex; align-items:center; justify-content:center;
+      background: rgba(255,255,255,0.03); color: #e6eef7; cursor:pointer;
+      border: 1px solid rgba(255,255,255,0.03);
+      transition: transform .18s ease, background .18s ease;
+    }
+    body.page-parceiros .partners-nav .partners-arrow:hover { transform: translateY(-3px); background: rgba(255,255,255,0.05); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      body.page-parceiros .partners-hero { flex-direction: column; align-items: flex-start; gap: 14px; }
+      body.page-parceiros .partners-symbol { width:72px; height:72px; }
+      body.page-parceiros .partners-heading h1 { font-size: 26px; }
+      .partnersSwiper { padding: 12px 6px; }
+    }
+    </style>
+</head>
+<body>
+
+    <a class="skip-link" href="#main-content" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Pular para o conteúdo</a>
+
+    <header>
+        <div class="container nav-container">
+
+            <!-- Logo clicável -->
+            <a href="/home" class="logo-container nav-link" data-target="home" style="text-decoration:none;">
+                <img src="/assets/images/logo-vektor-consultoria.png" alt="Vektor Consultoria" class="logo">
+            </a>
+
+            <!-- MENU DESKTOP -->
+            <nav class="nav-links" aria-label="Menu principal" role="navigation">
+                <a href="/home" class="nav-link active" data-target="home">Home</a>
+                <a href="/quem-somos" class="nav-link" data-target="quem-somos">Quem Somos</a>
+                <a href="/solucoes" class="nav-link" data-target="solucoes">Soluções</a>
+                <a href="/parceiros" class="nav-link" data-target="parceiros">Parceiros</a>
+                <a href="/faq" class="nav-link" data-target="faq">FAQ</a>
+                <a href="/contato" class="nav-link" data-target="contato">Contato</a>
+            </nav>
+            
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ativar modo escuro" title="Modo escuro">
+                <i class="fas fa-moon"></i>
+            </button>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false" type="button">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+            <a href="/home" class="mobile-nav-link active" data-target="home">Home</a>
+            <a href="/quem-somos" class="mobile-nav-link" data-target="quem-somos">Quem Somos</a>
+            <a href="/solucoes" class="mobile-nav-link" data-target="solucoes">Soluções</a>
+            <a href="/parceiros" class="mobile-nav-link" data-target="parceiros">Parceiros</a>
+            <a href="/faq" class="mobile-nav-link" data-target="faq">FAQ</a>
+            <a href="/contato" class="mobile-nav-link" data-target="contato">Contato</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main id="main-content">
+      <!-- Página Home -->
+      <section id="home" class="section active">
+        <div class="hero-section">
+          <!-- Carrossel Swiper -->
+          <div class="swiper homeSwiper" aria-roledescription="carousel">
+            <div class="swiper-wrapper">
+              <!-- Slides serão gerados dinamicamente pelo JavaScript -->
+              <!-- IMPORTANTE: Os botões já estão incluídos nos slides gerados pelo main.js -->
+            </div>
+            <div class="swiper-button-next" aria-hidden="true"></div>
+            <div class="swiper-button-prev" aria-hidden="true"></div>
+            <div class="swiper-pagination" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <!-- REMOVI OS BOTÕES AQUI - eles já estão nos slides do carrossel -->
+        <!-- Os botões "Saber Mais" e "Ver Soluções" estão sendo gerados pelo JavaScript dentro dos slides -->
+
+        <div class="home-content">
+          <div class="home-text">
+            <h2>A VEKTOR CONSULTORIA TEM TUDO O QUE A SUA EMPRESA PRECISA</h2>
+            <p>A VEKTOR CONSULTORIA TEM TUDO O QUE A SUA EMPRESA PRECISA PARA SAIR DO IMPROVISO E ALCANÇAR CRESCIMENTO CONSISTENTE, COM MÉTODO, CLAREZA E PREVISIBILIDADE.</p>
+            <p>No mercado atual, muitas empresas crescem no esforço do dia a dia, mas travam justamente quando o potencial é maior. Processos fragmentados, decisões reativas e dados que não se conectam transformam oportunidade em frustração e faturamento errático.</p>
+            <p>A Vektor Consultoria foi feita para mudar isso. Nós transformamos operações confusas em sistemas estruturados, entregando resultados mensuráveis e crescimento sustentável que não depende de improviso.</p>
+
+            <ul>
+              <li><strong>Diagnóstico Estratégico e Operacional:</strong> revelamos gargalos reais com clareza e dados.</li>
+              <li><strong>Blueprint de Crescimento:</strong> transformamos diagnóstico em um plano executivo claro e aplicável.</li>
+              <li><strong>Implantação de Força:</strong> implementamos processos, ritos e dashboards que funcionam no dia a dia.</li>
+              <li><strong>Inteligência Operacional:</strong> KPIs e modelos de gestão que liberam velocidade e visibilidade.</li>
+              <li><strong>RevOps (Revenue Operations):</strong> integramos Marketing, Vendas e Customer Success em uma máquina previsível e escalável.</li>
+              <li><strong>IA Aplicada a Negócios:</strong> automação inteligente para CRM, prospecção e rotinas comerciais e operacionais.</li>
+              <li><strong>Mentoria Executiva, Treinamentos e Palestras:</strong> capacitação prática para líderes e equipes.</li>
+            </ul>
+
+            <p>Empresas que unem estratégia, processos e execução entregam resultados superiores, porque deixam de reagir a crises e começam a gerar crescimento previsível e sustentável. Na Vektor, nós não vendemos relatórios bonitos: nós fazemos acontecer, lado a lado com sua equipe.</p>
+            <p>Se você quer sair do "empurrar com a barriga" e transformar esforço em resultado, ganhar clareza sobre onde investir energia e tempo, implantar sistemas que funcionam de verdade, tornar seus indicadores visíveis e acionáveis e profissionalizar sua operação comercial, então você chegou ao lugar certo.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Página Parceiros (modified) -->
+        <section id="parceiros" class="section">
+            <div class="partners-panel">
+              <div class="partners-panel-inner">
+                <div class="container partners-section">
+                  <div class="partners-hero">
+                      <div class="partners-symbol" aria-hidden="true">
+                        <!-- Optional logo inside symbol (kept small) -->
+                        <img src="/assets/images/icone-vektor-consultoria.png" alt="" aria-hidden="true" />
+                      </div>
+
+                      <div class="partners-heading">
+                          <h1>Nossos <span class="partners-accent">Parceiros</span></h1>
+                          <p class="partners-subtitle">Colaboramos com as melhores empresas e ferramentas para entregar resultados excepcionais</p>
+                      </div>
+                  </div>
+
+                  <!-- Carousel de logos (Swiper) -->
+                  <div class="partners-carousel-wrapper">
+                    <div class="swiper partnersSwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://danai.work" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-danai-work.jpg" alt="Danai.work" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-google.jpg" alt="Google" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://llama.com" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-llama.jpg" alt="Llama" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://deepseek.com" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-deepseek.jpg" alt="DeepSeek" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://clinicadefinancas.com.br" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-clinica-de-financas.png" alt="Clínica de Finanças" loading="lazy">
+                          </a>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://danai.work" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-danai-work.jpg" alt="Danai.work" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://google.com" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-google.jpg" alt="Google" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://llama.com" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-llama.jpg" alt="Llama" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://deepseek.com" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-deepseek.jpg" alt="DeepSeek" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="swiper-slide">
+                          <a class="partner-card" href="https://clinicadefinancas.com.br" target="_blank" rel="noopener noreferrer">
+                            <img src="/assets/images/logo-parceiro-clinica-de-financas.png" alt="Clínica de Finanças" loading="lazy">
+                          </a>
+                        </div>
+                      </div>
+
+                      <!-- Pagination (optional) -->
+                      <div class="partners-pagination swiper-pagination"></div>
+                    </div>
+
+                    <!-- Optional nav (visible on desktop) -->
+                    <div class="partners-nav" aria-hidden="true">
+                      <div class="partners-arrow partners-prev"><i class="fas fa-chevron-left"></i></div>
+                      <div class="partners-arrow partners-next"><i class="fas fa-chevron-right"></i></div>
+                    </div>
+                  </div>
+
+                  <div class="partners-cta">
+                      <h2>Se você tem base de clientes e quer entregar resultado com método</h2>
+                      <p>A Vektor integra operação + execução para gerar crescimento sustentável e previsível</p>
+                      <a href="https://wa.me/5562998487606" target="_blank" rel="noopener noreferrer" class="partners-btn">Conversar sobre parceria!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+        <!-- rest of sections unchanged -->
+        <!-- Página FAQ -->
+        <section id="faq" class="section">
+            <div class="container faq-section">
+                <div class="faq-header">
+                    <h1>Perguntas Frequentes</h1>
+                    <p>Tire suas dúvidas sobre a Vektor Consultoria e nossos serviços</p>
+                </div>
+                
+                <div class="faq-container" id="faqContainer">
+                    <!-- FAQ será gerado dinamicamente pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Página Contato -->
+        <section id="contato" class="section">
+            <div class="container contact-section">
+                <div class="contact-header">
+                    <h1>Entre em Contato</h1>
+                    <p>Fale connosco e descubra como podemos ajudar sua empresa a crescer</p>
+                </div>
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h3>Fale com um Especialista</h3>
+                            <p>Converse diretamente com nossos consultores pelo WhatsApp para uma avaliação inicial rápida e direta.</p>
+                            <a href="https://wa.me/5562998487606" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: fit-content;">WhatsApp</a>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>Siga-nos nas Redes</h3>
+                            <p>Acompanhe nossas novidades, insights e cases de sucesso em nossas redes sociais.</p>
+                            <div class="contact-social">
+                                <a href="https://www.instagram.com/renato_c_passos/" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/renato-passos-mentor/" target="_blank" rel="noopener noreferrer" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h3>Atendimento Personalizado</h3>
+                            <p>Cada empresa é única. Analisamos seu caso individualmente para oferecer a melhor solução.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="nome">Nome Completo *</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="whatsapp">WhatsApp *</label>
+                                <input type="tel" id="whatsapp" name="whatsapp" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mensagem">Mensagem *</label>
+                                <textarea id="mensagem" name="mensagem" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="form-submit">Enviar Mensagem</button>
+                            
+                            <div id="formStatus" class="status"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">VEKTOR<span>CONSULTORIA</span></div>
+            <div class="footer-text">Transformando empresas comuns em operações inteligentes, previsíveis e escaláveis.</div>
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/renato_c_passos/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/renato-passos-mentor/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/5562998487606" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            
+            <div class="footer-copyright">
+                Todos os Direitos Reservados — Desenvolvido por: <a href="https://vektorweb.shop" target="_blank" rel="noopener noreferrer"><img src="/assets/images/logo-vektor-web.png" alt="Vektor Web" style="height: 80px; vertical-align: middle; margin-left: 5px;"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <!-- Partners init script: adds page-parceiros scope and initializes logos carousel -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var el = document.querySelector('.partnersSwiper');
+      if (!el || !window.Swiper) return;
+
+      var totalSlides = el.querySelectorAll('.swiper-slide').length;
+      var enableLoop = totalSlides >= 8;
+
+      var swiper = new Swiper('.partnersSwiper', {
+        loop: enableLoop,
+        autoplay: enableLoop ? {
+          delay: 2200,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        } : false,
+        speed: 900,
+        slidesPerView: 5,
+        spaceBetween: 24,
+        centeredSlides: false,
+        breakpoints: {
+          0:    { slidesPerView: 1.3, spaceBetween: 12 },
+          480:  { slidesPerView: 2.2, spaceBetween: 14 },
+          768:  { slidesPerView: 3.2, spaceBetween: 18 },
+          992:  { slidesPerView: 4,   spaceBetween: 20 },
+          1200: { slidesPerView: 5,   spaceBetween: 24 }
+        },
+        pagination: {
+          el: '.partners-pagination',
+          clickable: true
+        },
+        navigation: {
+          nextEl: '.partners-next',
+          prevEl: '.partners-prev'
+        }
+      });
+
+      var prev = document.querySelector('.partners-prev');
+      var next = document.querySelector('.partners-next');
+      if (prev) prev.addEventListener('click', function () { swiper.slidePrev(); });
+      if (next) next.addEventListener('click', function () { swiper.slideNext(); });
+
+      var links = document.querySelectorAll('.partnersSwiper .swiper-slide a');
+      links.forEach(function(a){
+        a.addEventListener('focus', function(){ if (swiper.autoplay) swiper.autoplay.stop(); });
+        a.addEventListener('blur', function(){ if (swiper.autoplay) swiper.autoplay.start(); });
+      });
+    });
+    </script>
+
+    <!-- Script for tracking / other inline handlers remain unchanged -->
+    <script>
+        // Função para enviar evento para Facebook Pixel
+        function sendFacebookEvent(eventName, eventData) {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', eventName, eventData);
+            }
+        }
+        
+        // Função para enviar evento para Google Analytics 4
+        function sendGA4Event(eventName, eventData) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', eventName, eventData);
+            }
+        }
+        
+        // Rastrear cliques no WhatsApp
+        document.addEventListener('DOMContentLoaded', function() {
+            // Rastrear WhatsApp fixo
+            const whatsappButtons = document.querySelectorAll('a[href*="wa.me"]');
+            whatsappButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = (this.innerText && this.innerText.trim()) ? this.innerText.trim() : 'WhatsApp Button';
+                    sendFacebookEvent('Contact', {
+                        method: 'WhatsApp',
+                        button_text: buttonText
+                    });
+                    sendGA4Event('whatsapp_click', {
+                        button_location: buttonText,
+                        page_location: window.location.href
+                    });
+                });
+            });
+            
+            // Rastrear formulário de contato
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    sendFacebookEvent('Lead', {
+                        form_name: 'Contact Form',
+                        form_location: 'Contact Page'
+                    });
+                    sendGA4Event('form_submit', {
+                        form_name: 'Contact Form',
+                        form_location: 'Contact Page'
+                    });
+                });
+            }
+            
+            // Rastrear cliques em soluções (quando disponível)
+            const solutionLinks = document.querySelectorAll('.solution-card, .modal-whatsapp');
+            solutionLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const solutionName = this.dataset.solution || 'Solution';
+                    sendFacebookEvent('ViewContent', {
+                        content_type: 'solution',
+                        content_name: solutionName
+                    });
+                    sendGA4Event('solution_click', {
+                        solution_name: solutionName
+                    });
+                });
+            });
+
+            // Exibir botão WhatsApp fixo apenas no FAQ (SPAs with hash or legacy)
+            function toggleFixedWhatsapp() {
+                const el = document.querySelector('.faq-fixed-whatsapp');
+                if (!el) return;
+                const isFaq = (window.location.pathname === '/faq') || (window.location.hash === '#faq') || (window.location.href.indexOf('/faq') !== -1);
+                el.style.display = isFaq ? 'block' : 'none';
+            }
+            toggleFixedWhatsapp();
+            window.addEventListener('hashchange', toggleFixedWhatsapp);
+        });
+    </script>
+
+</body>
+</html>

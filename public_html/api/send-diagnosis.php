@@ -30,7 +30,7 @@ try {
         throw new RuntimeException("FPDF não carregado.");
     }
 
-$DEST_EMAIL = "consultoriasbilionaria@gmail.com";
+$DEST_EMAIL = "contato@clinicadefinancas.com.br";
 
 $raw = file_get_contents("php://input");
 $data = json_decode($raw, true);

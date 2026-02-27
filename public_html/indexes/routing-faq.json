@@ -1,0 +1,346 @@
+{
+  "name": "Vektor Consultoria - FAQ Routing",
+  "version": "1.0.0",
+  "language": "pt-BR",
+  "description": "Roteador para respostas rápidas via FAQ. Se não atingir confiança mínima, encaminha para busca nos arquivos .md via index.json.",
+  "config": {
+    "match_strategy": "hybrid",
+    "normalize": {
+      "lowercase": true,
+      "remove_accents": true,
+      "trim_spaces": true
+    },
+    "thresholds": {
+      "high_confidence": 0.78,
+      "medium_confidence": 0.62
+    },
+    "top_k_candidates": 5,
+    "fallback": {
+      "action": "kb_retrieve",
+      "kb_index": "index.json",
+      "kb_strategy": "retrieve_top_k",
+      "kb_top_k": 2
+    }
+  },
+  "rules": [
+    {
+      "id": "route_start_service_choice",
+      "priority": 100,
+      "when_any": [
+        "qual servico contratar primeiro",
+        "por onde comeco",
+        "qual a melhor solucao para comecar",
+        "o que contratar primeiro",
+        "como comecar com a vektor"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_002"
+      }
+    },
+    {
+      "id": "route_what_vektor_does",
+      "priority": 95,
+      "when_any": [
+        "o que a vektor faz",
+        "quais servicos a vektor oferece",
+        "quais sao as solucoes",
+        "me explique a vektor",
+        "servicos da vektor"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_001"
+      }
+    },
+    {
+      "id": "route_diagnostico",
+      "priority": 90,
+      "when_any": [
+        "o que e diagnostico estrategico",
+        "diagnostico estrategico e operacional",
+        "para que serve diagnostico",
+        "quando contratar diagnostico",
+        "diagnostico da vektor"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_003"
+      }
+    },
+    {
+      "id": "route_blueprint",
+      "priority": 90,
+      "when_any": [
+        "o que e blueprint",
+        "arquitetura de crescimento",
+        "blueprint de crescimento",
+        "roadmap de execucao",
+        "planejamento executavel"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_004"
+      }
+    },
+    {
+      "id": "route_revops",
+      "priority": 90,
+      "when_any": [
+        "o que e revops",
+        "revenue operations",
+        "previsibilidade de receita",
+        "integrar marketing vendas pos-venda",
+        "organizar funil de vendas"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_005"
+      }
+    },
+    {
+      "id": "route_ai",
+      "priority": 90,
+      "when_any": [
+        "o que a ia faz",
+        "ia da vektor",
+        "automacao de crm",
+        "assistente sdr",
+        "avatar no atendimento",
+        "inteligencia artificial aplicada"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_006"
+      }
+    },
+    {
+      "id": "route_tools_vs_consulting",
+      "priority": 85,
+      "when_any": [
+        "vocês vendem ferramenta",
+        "voce vende software",
+        "e consultoria ou ferramenta",
+        "vocês fazem consultoria",
+        "voces so implantam ferramenta"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_007"
+      }
+    },
+    {
+      "id": "route_time_to_results",
+      "priority": 80,
+      "when_any": [
+        "quanto tempo leva",
+        "em quanto tempo vejo resultado",
+        "quando aparece resultado",
+        "prazo para resultados",
+        "tempo de implantacao"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_008"
+      }
+    },
+    {
+      "id": "route_company_size",
+      "priority": 80,
+      "when_any": [
+        "vocês atendem pequenas empresas",
+        "atendem empresas grandes",
+        "atendem qualquer porte",
+        "qual porte de empresa",
+        "serve para minha empresa"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_009"
+      }
+    },
+    {
+      "id": "route_implantacao_forca",
+      "priority": 85,
+      "when_any": [
+        "o que e implantacao de forca",
+        "como tirar do papel",
+        "como garantir execucao",
+        "disciplina operacional",
+        "processo nao funciona na pratica"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_010"
+      }
+    },
+    {
+      "id": "route_inteligencia_operacional",
+      "priority": 85,
+      "when_any": [
+        "o que e inteligencia operacional",
+        "dashboards e kpis",
+        "controle da operacao",
+        "alertas de risco",
+        "dados para decisao"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_011"
+      }
+    },
+    {
+      "id": "route_mentoria",
+      "priority": 80,
+      "when_any": [
+        "mentoria executiva",
+        "mentoria para ceo",
+        "apoio para fundador",
+        "tomada de decisao do lider",
+        "lideranca e pressao"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_012"
+      }
+    },
+    {
+      "id": "route_treinamentos",
+      "priority": 75,
+      "when_any": [
+        "vocês fazem treinamento",
+        "treinar equipe",
+        "padronizar execucao",
+        "treinamento comercial",
+        "treinamento operacional"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_013"
+      }
+    },
+    {
+      "id": "route_palestras",
+      "priority": 70,
+      "when_any": [
+        "vocês fazem palestra",
+        "workshop vektor",
+        "evento corporativo",
+        "palestras e workshops",
+        "tema para evento"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_014"
+      }
+    },
+    {
+      "id": "route_sales_predictability",
+      "priority": 85,
+      "when_any": [
+        "quero previsibilidade de vendas",
+        "organizar vendas",
+        "aumentar conversao",
+        "melhorar funil",
+        "vendas inconsistentes"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_015"
+      }
+    },
+    {
+      "id": "route_avatar_automation",
+      "priority": 85,
+      "when_any": [
+        "quero um chatbot",
+        "quero um avatar",
+        "automatizar atendimento",
+        "responder automaticamente",
+        "bot no site"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_016"
+      }
+    },
+    {
+      "id": "route_guarantee",
+      "priority": 70,
+      "when_any": [
+        "vocês garantem resultado",
+        "tem garantia",
+        "garantia de faturamento",
+        "promessa de resultado",
+        "resultado garantido"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_017"
+      }
+    },
+    {
+      "id": "route_how_it_works",
+      "priority": 75,
+      "when_any": [
+        "como funciona",
+        "como e o processo",
+        "etapas do trabalho",
+        "metodologia da vektor",
+        "como a vektor trabalha"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_018"
+      }
+    },
+    {
+      "id": "route_funnel_definition",
+      "priority": 60,
+      "when_any": [
+        "o que e funil",
+        "funil de vendas significado",
+        "o que significa funil de vendas",
+        "explica funil",
+        "definicao de funil"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_019"
+      }
+    },
+    {
+      "id": "route_playbook_definition",
+      "priority": 60,
+      "when_any": [
+        "o que e playbook",
+        "playbook comercial significado",
+        "explica playbook",
+        "definicao de playbook",
+        "para que serve playbook"
+      ],
+      "route_to": {
+        "type": "faq",
+        "faq_id": "faq_020"
+      }
+    }
+  ],
+  "post_process": {
+    "if_no_rule_match": {
+      "action": "score_against_faq",
+      "top_k": 3,
+      "if_score_ge": {
+        "high_confidence": { "action": "answer_with_faq" },
+        "medium_confidence": {
+          "action": "answer_with_faq_and_offer_details",
+          "offer": "Se você quiser, eu detalho como isso funciona no seu cenário."
+        }
+      },
+      "else": {
+        "action": "kb_retrieve",
+        "kb_index": "index.json",
+        "kb_top_k": 2
+      }
+    }
+  }
+}

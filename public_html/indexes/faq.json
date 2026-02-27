@@ -1,0 +1,127 @@
+{
+  "name": "Vektor Consultoria - FAQ",
+  "version": "1.0.0",
+  "language": "pt-BR",
+  "faqs": [
+    {
+      "id": "faq_001",
+      "question": "O que a Vektor Consultoria faz?",
+      "answer": "A Vektor estrutura crescimento com método, clareza e previsibilidade, atuando com Diagnóstico Estratégico, Blueprint de Crescimento, RevOps, IA aplicada, Implantação de Força, Inteligência Operacional, Mentoria Executiva, Treinamentos e Palestras/Workshops.",
+      "tags": ["geral", "servicos", "o-que-faz"]
+    },
+    {
+      "id": "faq_002",
+      "question": "Qual serviço devo contratar primeiro?",
+      "answer": "Na maioria dos casos, o melhor ponto de partida é o Diagnóstico Estratégico e Operacional, porque ele identifica gargalos reais e define prioridades. Se você já tem clareza e só precisa organizar execução, o Blueprint pode ser o primeiro passo.",
+      "tags": ["inicio", "diagnostico", "blueprint", "escolha"]
+    },
+    {
+      "id": "faq_003",
+      "question": "O que é Diagnóstico Estratégico e Operacional?",
+      "answer": "É uma imersão profunda na realidade do negócio para identificar gargalos, riscos e oportunidades com base em processos, pessoas, estratégia e dados. Ele elimina achismos e define prioridades de correção e crescimento.",
+      "tags": ["diagnostico", "gargalos", "prioridades"]
+    },
+    {
+      "id": "faq_004",
+      "question": "O que é o Blueprint e Arquitetura de Crescimento?",
+      "answer": "É a transformação do diagnóstico em um plano executável: objetivos, prioridades, roadmap, indicadores e governança. Ele organiza a empresa para crescer com consistência, evitando improviso.",
+      "tags": ["blueprint", "roadmap", "governanca", "crescimento"]
+    },
+    {
+      "id": "faq_005",
+      "question": "O que é RevOps?",
+      "answer": "RevOps (Revenue Operations) é a estrutura que integra Marketing, Vendas e Pós-venda em um único sistema orientado à receita. Ele cria previsibilidade, padroniza processos e reduz perdas no funil.",
+      "tags": ["revops", "receita", "funil", "integracao"]
+    },
+    {
+      "id": "faq_006",
+      "question": "O que a IA da Vektor faz na prática?",
+      "answer": "A Vektor aplica IA para aumentar produtividade e escala, com foco em prospecção inteligente, enriquecimento de dados, assistente SDR, automação de CRM, atendimento automatizado com base de conhecimento e apoio à decisão via dados.",
+      "tags": ["ia", "automacao", "crm", "sdr", "atendimento"]
+    },
+    {
+      "id": "faq_007",
+      "question": "A Vektor vende ferramenta ou faz consultoria?",
+      "answer": "A Vektor faz consultoria e implantação com método. A tecnologia é usada como meio para acelerar resultados, não como fim. O foco é estruturar processos, execução e previsibilidade.",
+      "tags": ["consultoria", "tecnologia", "metodo"]
+    },
+    {
+      "id": "faq_008",
+      "question": "Quanto tempo leva para ver resultado?",
+      "answer": "Depende da maturidade do negócio e do escopo. Em geral, a clareza de direção aparece rápido no Diagnóstico e no Blueprint, e ganhos operacionais e comerciais surgem conforme a implantação dos processos e rotinas.",
+      "tags": ["prazo", "resultados", "expectativa"]
+    },
+    {
+      "id": "faq_009",
+      "question": "Vocês atendem empresas de qualquer porte?",
+      "answer": "Sim, desde que exista potencial de crescimento e abertura para estruturação com método. O que muda é o escopo e a profundidade da implantação.",
+      "tags": ["porte", "atendimento", "perfil"]
+    },
+    {
+      "id": "faq_010",
+      "question": "O que é Implantação de Força?",
+      "answer": "É a etapa que garante execução real: clareza de papéis, ritmo operacional, padronização e alinhamento entre liderança e time para sustentar mudanças e tirar o planejamento do papel.",
+      "tags": ["implantacao", "execucao", "disciplina"]
+    },
+    {
+      "id": "faq_011",
+      "question": "O que é Inteligência Operacional?",
+      "answer": "É a estrutura que dá visibilidade real da operação com indicadores críticos, integração de dados, painéis e alertas. Ela apoia decisões rápidas, reduz surpresas e aumenta controle para escalar.",
+      "tags": ["inteligencia-operacional", "kpi", "controle", "dados"]
+    },
+    {
+      "id": "faq_012",
+      "question": "O que é Mentoria Executiva?",
+      "answer": "É um acompanhamento estratégico para líderes e fundadores focado em tomada de decisão, maturidade de liderança, visão sistêmica, pressão e preparação para escala.",
+      "tags": ["mentoria", "lideranca", "ceo", "decisao"]
+    },
+    {
+      "id": "faq_013",
+      "question": "A Vektor oferece treinamentos para equipes?",
+      "answer": "Sim. Os treinamentos capacitam times e lideranças para operar com método, padronizar execução e aumentar produtividade, com formatos estratégicos, comerciais, operacionais e de tecnologia/IA.",
+      "tags": ["treinamentos", "equipe", "capacitacao"]
+    },
+    {
+      "id": "faq_014",
+      "question": "Vocês fazem palestras e workshops?",
+      "answer": "Sim. A Vektor realiza palestras e workshops com conteúdo prático e estratégico para ampliar visão, alinhar equipes e sensibilizar para mudanças, com temas como estratégia, execução, RevOps e IA aplicada.",
+      "tags": ["palestras", "workshops", "eventos"]
+    },
+    {
+      "id": "faq_015",
+      "question": "A Vektor pode me ajudar a organizar vendas e aumentar previsibilidade?",
+      "answer": "Sim. A solução mais direta para previsibilidade é RevOps, que estrutura funil, processos, playbooks, indicadores e integração entre áreas para reduzir perdas e aumentar conversão.",
+      "tags": ["vendas", "previsibilidade", "revops"]
+    },
+    {
+      "id": "faq_016",
+      "question": "Vocês podem automatizar meu atendimento com um avatar?",
+      "answer": "Sim. Na solução de IA aplicada, a Vektor implementa atendimento automatizado com base de conhecimento, para responder dúvidas, qualificar leads e orientar clientes com coerência e contexto.",
+      "tags": ["avatar", "chatbot", "atendimento", "ia"]
+    },
+    {
+      "id": "faq_017",
+      "question": "A Vektor garante resultado?",
+      "answer": "A Vektor trabalha com método, execução e indicadores para maximizar resultados, mas não faz promessas ou garantias sem entender o contexto e o escopo. O resultado depende do ponto de partida e do comprometimento com a implementação.",
+      "tags": ["garantia", "resultado", "expectativa"]
+    },
+    {
+      "id": "faq_018",
+      "question": "Como funciona o processo de trabalho da Vektor?",
+      "answer": "Normalmente começa com Diagnóstico, depois Blueprint, e então implantações como RevOps, IA e Inteligência Operacional. Em seguida, a Implantação de Força sustenta a execução. Mentoria, Treinamentos e Workshops complementam.",
+      "tags": ["processo", "metodologia", "etapas"]
+    },
+    {
+      "id": "faq_019",
+      "question": "O que é funil de vendas?",
+      "answer": "É o caminho que um lead percorre até virar cliente. Um funil bem estruturado tem etapas claras, critérios de avanço e métricas para identificar onde há perdas e como melhorar a conversão.",
+      "tags": ["conceitos", "funil", "vendas"]
+    },
+    {
+      "id": "faq_020",
+      "question": "O que é playbook comercial?",
+      "answer": "É um guia prático que padroniza como o time comercial aborda leads, conduz conversas, lida com objeções e fecha negócios, aumentando consistência e previsibilidade.",
+      "tags": ["conceitos", "playbook", "vendas"]
+    }
+  ]
+}

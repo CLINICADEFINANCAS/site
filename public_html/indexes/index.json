@@ -1,0 +1,140 @@
+{
+  "kb_name": "Vektor Consultoria - Base de Conhecimento",
+  "kb_version": "1.0.0",
+  "language": "pt-BR",
+  "description": "Índice de conhecimento oficial da Vektor Consultoria para roteamento de respostas do avatar.",
+  "files": [
+    {
+      "id": "svc_diagnostico",
+      "title": "Diagnóstico Estratégico e Operacional",
+      "slug": "diagnostico-estrategico-operacional",
+      "path": "knowledge-base/diagnostico-estrategico-operacional.md",
+      "tags": ["diagnostico", "imersao", "gargalos", "riscos", "oportunidades", "clareza", "prioridade", "base"],
+      "intents": [
+        "o que e diagnostico",
+        "quando contratar diagnostico",
+        "para que serve diagnostico",
+        "gargalos e riscos",
+        "primeiro passo vektor"
+      ]
+    },
+    {
+      "id": "svc_blueprint",
+      "title": "Blueprint e Arquitetura de Crescimento",
+      "slug": "blueprint-arquitetura-crescimento",
+      "path": "knowledge-base/blueprint-arquitetura-crescimento.md",
+      "tags": ["blueprint", "arquitetura", "crescimento", "roadmap", "prioridades", "kpis", "governanca", "execucao"],
+      "intents": [
+        "o que e blueprint",
+        "arquitetura de crescimento",
+        "roadmap de execucao",
+        "prioridades e metas",
+        "crescer com metodo"
+      ]
+    },
+    {
+      "id": "svc_revops",
+      "title": "RevOps (Revenue Operations)",
+      "slug": "revops",
+      "path": "knowledge-base/revenue-operations-revops.md",
+      "tags": ["revops", "receita", "funil", "playbooks", "marketing", "vendas", "pos-venda", "previsibilidade"],
+      "intents": [
+        "o que e revops",
+        "previsibilidade de receita",
+        "funil de vendas",
+        "playbook comercial",
+        "integrar marketing vendas pos-venda"
+      ]
+    },
+    {
+      "id": "svc_ia",
+      "title": "IA Aplicada a Negócios",
+      "slug": "ia-aplicada-negocios",
+      "path": "knowledge-base/ia-aplicada-negocios.md",
+      "tags": ["ia", "inteligencia artificial", "automacao", "crm", "sdr", "prospeccao", "enriquecimento de dados", "avatar", "atendimento"],
+      "intents": [
+        "ia na vektor",
+        "o que a ia faz",
+        "automacao de crm",
+        "assistente sdr",
+        "avatar atendimento"
+      ]
+    },
+    {
+      "id": "svc_implantacao_forca",
+      "title": "Implantação de Força",
+      "slug": "implantacao-de-forca",
+      "path": "knowledge-base/implantacao-de-forca.md",
+      "tags": ["execucao", "disciplina", "rotina", "papel", "responsabilidade", "cadencia", "padronizacao", "alinhamento"],
+      "intents": [
+        "como fazer executar",
+        "implantacao de processos",
+        "disciplina operacional",
+        "alinhamento lideranca time",
+        "tirar do papel"
+      ]
+    },
+    {
+      "id": "svc_inteligencia_operacional",
+      "title": "Inteligência Operacional",
+      "slug": "inteligencia-operacional",
+      "path": "knowledge-base/inteligencia-operacional.md",
+      "tags": ["indicadores", "kpis", "dashboards", "visibilidade", "alertas", "decisao", "controle", "dados"],
+      "intents": [
+        "inteligencia operacional",
+        "kpis e dashboards",
+        "controle da operacao",
+        "alertas e riscos",
+        "decidir com dados"
+      ]
+    },
+    {
+      "id": "svc_mentoria_executiva",
+      "title": "Mentoria Executiva",
+      "slug": "mentoria-executiva",
+      "path": "knowledge-base/mentoria-executiva.md",
+      "tags": ["mentoria", "ceo", "lideranca", "decisao", "estrategia", "governanca", "pressao", "escala"],
+      "intents": [
+        "mentoria para ceo",
+        "apoio a lideranca",
+        "tomada de decisao",
+        "fundador gargalo",
+        "preparar para escala"
+      ]
+    },
+    {
+      "id": "svc_treinamentos",
+      "title": "Treinamentos",
+      "slug": "treinamentos",
+      "path": "knowledge-base/treinamentos.md",
+      "tags": ["treinamento", "capacitacao", "times", "padronizacao", "comercial", "operacional", "ia", "produtividade"],
+      "intents": [
+        "treinar equipe",
+        "padronizar execucao",
+        "treinamento comercial",
+        "treinamento operacional",
+        "treinamento em ia"
+      ]
+    },
+    {
+      "id": "svc_palestras_workshops",
+      "title": "Palestras e Workshops",
+      "slug": "palestras-workshops",
+      "path": "knowledge-base/palestras-workshops.md",
+      "tags": ["palestra", "workshop", "evento", "provocacao", "visao estrategica", "alinhamento", "temas"],
+      "intents": [
+        "palestra vektor",
+        "workshop vektor",
+        "evento corporativo",
+        "tema para equipe",
+        "sensibilizacao para mudanca"
+      ]
+    }
+  ],
+  "routing_rules": {
+    "default_strategy": "retrieve_top_k",
+    "top_k": 3,
+    "fallback": "ask_for_context",
+    "tie_breaker": "prefer_service_specific_over_generic"
+  }
+}
