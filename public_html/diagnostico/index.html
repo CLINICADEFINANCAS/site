@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="icon" href="/assets/img/icone-clinica-de-financas-modo-escuro.png" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/assets/img/icone-clinica-de-financas-modo-claro.png" media="(prefers-color-scheme: light)" />
+  <title>Diagnóstico Financeiro</title>
+  <meta name="description" content="Questionário de Diagnóstico Financeiro – Atendimento Inicial." />
+  <link rel="canonical" href="https://clinicadefinancas.com.br/diagnostico/" />
+
+  <meta property="og:title" content="Diagnóstico Financeiro" />
+  <meta property="og:description" content="Questionário de Diagnóstico Financeiro – Atendimento Inicial." />
+  <meta property="og:url" content="https://clinicadefinancas.com.br/diagnostico/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://clinicadefinancas.com.br/assets/img/og/home.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  <style>
+    .diagnostico-page{background: linear-gradient(180deg, #0b0f18, #0f1a2b); min-height:100vh;}
+    .diag-wrap{width:min(1080px, calc(100% - 40px)); margin:0 auto; padding:40px 0 80px;}
+    .diag-head{margin-bottom:24px;}
+    .diag-head h1{margin:0 0 8px; color:#fff; font-size:28px; letter-spacing:-0.02em;}
+    .diag-head p{margin:0; color:var(--muted);}  
+    .diag-card{border:1px solid var(--line); background:rgba(255,255,255,.04); border-radius:16px; padding:18px; margin-bottom:16px;}
+    .diag-title{margin:0 0 12px; color:#9cc7ff; font-size:13px; letter-spacing:.3px; text-transform:uppercase;}
+    .diag-grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+    @media (max-width:900px){ .diag-grid2{grid-template-columns:1fr;} }
+    .diag-field label{display:block; font-size:15px; color:#2ea76a; margin:0 0 6px; font-weight:700;}
+    .diag-field input,
+    .diag-field textarea,
+    .diag-field select{
+      width:100%; border-radius:12px; border:1px solid var(--line); background:rgba(255,255,255,.03);
+      color:var(--text); padding:12px; outline:none; font-family:inherit;
+    }
+        .diag-field.is-missing input,
+        .diag-field.is-missing textarea,
+        .diag-field.is-missing select,
+        .diag-field.is-missing .diag-radio,
+        .diag-field.is-missing .diag-check{
+          border-color: #b03a3a;
+          box-shadow: 0 0 0 1px rgba(176,58,58,.35);
+        }
+    .diag-field select option{
+      background:#0b0f18;
+      color:#ffffff;
+    }
+    .diag-field textarea{min-height:110px; resize:vertical;}
+    .diag-help{font-size:12px; color:var(--muted); margin-top:6px;}
+    .diag-options{display:grid; gap:10px;}
+    .diag-radio,
+    .diag-check{
+      display:flex; gap:10px; align-items:flex-start; padding:10px 12px; border-radius:12px;
+      border:1px solid var(--line); background:rgba(255,255,255,.03); cursor:pointer;
+    }
+    .diag-radio input,
+    .diag-check input{margin-top:2px; accent-color:#9cc7ff; width:20px; height:20px;}
+    .diag-field{margin-bottom:16px;}
+    .diag-status{margin-top:10px; font-size:13px; color:#d9e5ff; min-height:18px;}
+    .diag-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;}
+    .diag-btn{border:0; border-radius:12px; padding:12px 16px; font-weight:800; cursor:pointer;}
+    .diag-btn.primary{background: linear-gradient(90deg, var(--brand), var(--accent)); color:#fff;}
+    .diag-btn.ghost{background:rgba(255,255,255,.03); border:1px solid var(--line); color:#fff;}
+    .diag-group-error{color:#ffd0d0; font-size:12px; margin-top:8px;}
+    .diag-field.nextFocus{
+      outline: 3px solid rgba(156,199,255,.16);
+      border-radius:12px;
+      padding:10px;
+      margin:-10px;
+    }
+  </style>
+</head>
+
+<body class="diagnostico-page">
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-logo">
+        <a href="/home/"><img src="/assets/img/logo-clinica-de-financas.png" alt="Clínica de Finanças"></a>
+      </div>
+
+      <div class="header-links">
+        <nav class="header-nav" aria-label="Menu principal">
+          <a href="/home/">Home</a>
+          <a href="/metodo-saude-financeira/">Método Saúde Financeira</a>
+          <a href="/solucoes/">Soluções</a>
+          <a href="/sobre/">Sobre</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/midia/">Mídia</a>
+          <a href="/contato/">Contato</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="/calculadora-saude-financeira/" class="btn-calculadora" data-track="cta_calculadora" data-track-label="Header">Calculadora de Saúde Financeira</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="diagnostico-page">
+    <div class="diag-wrap">
+      <div class="diag-head">
+        <h1>Questionário de Diagnóstico Financeiro – Atendimento Inicial</h1>
+        <p>Uso exclusivo para diagnóstico e orientação financeira personalizada.</p>
+      </div>
+
+      <div class="diag-card">
+        <div class="diag-actions">
+          <button class="diag-btn ghost" type="button" id="diagClearTop">Limpar formulário</button>
+        </div>
+      </div>
+
+      <form id="diagnosticoForm" novalidate>
+        <section class="diag-card">
+          <h2 class="diag-title">Dados de contato</h2>
+          <div class="diag-grid2">
+            <div class="diag-field">
+              <label>1. Nome completo</label>
+              <input name="nome_completo" type="text" required>
+            </div>
+            <div class="diag-field">
+              <label>2. Profissão / Atividade principal</label>
+              <input name="profissao" type="text" required>
+            </div>
+            <div class="diag-field">
+              <label>3. E-mail</label>
+              <input name="email" type="email" required>
+            </div>
+            <div class="diag-field">
+              <label>4. Telefone / WhatsApp (formato: (XX)XXXXX-XXXX)</label>
+              <input name="telefone" type="text" required pattern="\(\d{2}\)\d{5}-\d{4}" placeholder="(00)00000-0000" title="Digite exatamente no formato: (XX)XXXXX-XXXX">
+            </div>
+            <div class="diag-field">
+              <label>5. Estado</label>
+              <select name="estado" id="estadoSelect" required>
+                <option value="" selected disabled>Selecione</option>
+                <option value="Outro País">Outro País</option>
+                <option value="AC">Acre (AC)</option>
+                <option value="AL">Alagoas (AL)</option>
+                <option value="AP">Amapá (AP)</option>
+                <option value="AM">Amazonas (AM)</option>
+                <option value="BA">Bahia (BA)</option>
+                <option value="CE">Ceará (CE)</option>
+                <option value="DF">Distrito Federal (DF)</option>
+                <option value="ES">Espírito Santo (ES)</option>
+                <option value="GO">Goiás (GO)</option>
+                <option value="MA">Maranhão (MA)</option>
+                <option value="MT">Mato Grosso (MT)</option>
+                <option value="MS">Mato Grosso do Sul (MS)</option>
+                <option value="MG">Minas Gerais (MG)</option>
+                <option value="PA">Pará (PA)</option>
+                <option value="PB">Paraíba (PB)</option>
+                <option value="PR">Paraná (PR)</option>
+                <option value="PE">Pernambuco (PE)</option>
+                <option value="PI">Piauí (PI)</option>
+                <option value="RJ">Rio de Janeiro (RJ)</option>
+                <option value="RN">Rio Grande do Norte (RN)</option>
+                <option value="RS">Rio Grande do Sul (RS)</option>
+                <option value="RO">Rondônia (RO)</option>
+                <option value="RR">Roraima (RR)</option>
+                <option value="SC">Santa Catarina (SC)</option>
+                <option value="SP">São Paulo (SP)</option>
+                <option value="SE">Sergipe (SE)</option>
+                <option value="TO">Tocantins (TO)</option>
+              </select>
+            </div>
+            <div class="diag-field">
+              <label>6. Cidade</label>
+              <input name="cidade" id="cidadeInput" list="cidadeList" type="text" required placeholder="Digite ou selecione">
+              <datalist id="cidadeList"></datalist>
+              <div class="diag-help">Pesquise o nome da cidade após escolher o estado.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="diag-card">
+          <h2 class="diag-title">Identificação e contexto familiar</h2>
+          <div class="diag-grid2">
+            <div class="diag-field">
+              <label>1. Idade</label>
+              <input name="idade" type="text" required>
+            </div>
+            <div class="diag-field">
+              <label>2. Estado civil</label>
+              <input name="estado_civil" type="text" required>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>3. Possui filhos?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="possui_filhos" value="Não" required><span>Não</span></label>
+              <label class="diag-radio"><input type="radio" name="possui_filhos" value="Sim" required><span>Sim</span></label>
+            </div>
+          </div>
+
+          <div class="diag-grid2" style="margin-top:12px;">
+            <div class="diag-field">
+              <label>4. Se possui filhos: número de filhos</label>
+              <input name="qtd_filhos" type="text" required>
+              <div class="diag-help">Se não se aplica, escreva exatamente: N/A</div>
+            </div>
+            <div class="diag-field">
+              <label>5. Se possui filhos: idades (ex.: 12, 8, 5)</label>
+              <input name="idades_filhos" type="text" required>
+              <div class="diag-help">Se não se aplica, escreva exatamente: N/A</div>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>6. Se possui filhos, eles estudam em:</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="estudo_filhos" value="Escola pública" required><span>Escola pública</span></label>
+              <label class="diag-radio"><input type="radio" name="estudo_filhos" value="Escola particular" required><span>Escola particular</span></label>
+              <label class="diag-radio"><input type="radio" name="estudo_filhos" value="N/A" required><span>N/A</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>7. Valor mensal total gasto com educação (mensalidade, transporte, material, extras) (R$)</label>
+            <input name="gasto_educacao" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0" placeholder="Ex.: 1.200,00">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>8. Dinâmica familiar: como as finanças são divididas em casa?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="dinamica_financeira" value="Sou o(a) único(a) provedor(a)" required><span>Sou o(a) único(a) provedor(a)</span></label>
+              <label class="diag-radio"><input type="radio" name="dinamica_financeira" value="Tudo é somado e decidido em conjunto" required><span>Tudo é somado e decidido em conjunto</span></label>
+              <label class="diag-radio"><input type="radio" name="dinamica_financeira" value="As contas são divididas, mas cada um gere sua sobra" required><span>As contas são divididas, mas cada um gere sua sobra</span></label>
+              <label class="diag-radio"><input type="radio" name="dinamica_financeira" value="O parceiro(a) não participa ou não está ciente da situação real" required><span>O parceiro(a) não participa ou não está ciente da situação real</span></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="diag-card">
+          <h2 class="diag-title">Situação profissional e renda</h2>
+          <div class="diag-field">
+            <label>1. Profissão / Atividade principal (detalhe sua função e rotina)</label>
+            <input name="profissao_detalhe" type="text" required>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>2. Tipo de vínculo</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="vinculo" value="CLT" required><span>CLT</span></label>
+              <label class="diag-radio"><input type="radio" name="vinculo" value="Autônomo" required><span>Autônomo</span></label>
+              <label class="diag-radio"><input type="radio" name="vinculo" value="Empresário" required><span>Empresário</span></label>
+              <label class="diag-radio"><input type="radio" name="vinculo" value="Aposentado" required><span>Aposentado</span></label>
+              <label class="diag-radio"><input type="radio" name="vinculo" value="Outro" required><span>Outro</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>3. Renda líquida mensal total da família (aproximada) (R$)</label>
+            <input name="renda_total" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0" placeholder="Ex.: 5.000,00">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>4. Sua renda é:</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="renda_tipo" value="Fixa" required><span>Fixa</span></label>
+              <label class="diag-radio"><input type="radio" name="renda_tipo" value="Variável" required><span>Variável</span></label>
+              <label class="diag-radio"><input type="radio" name="renda_tipo" value="Mista" required><span>Mista</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>5. Renda extra: possui outra fonte de ganho além da principal?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="renda_extra" value="Não" required><span>Não</span></label>
+              <label class="diag-radio"><input type="radio" name="renda_extra" value="Sim" required><span>Sim</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>6. Se sim, qual o valor médio mensal da renda extra? (R$)</label>
+            <input name="renda_extra_valor" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0" placeholder="Ex.: 1.000,00">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+        </section>
+
+        <section class="diag-card">
+          <h2 class="diag-title">Percepção da situação financeira</h2>
+          <div class="diag-field">
+            <label>1. Como você avalia sua situação financeira hoje?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="avaliacao_situacao" value="Muito ruim" required><span>Muito ruim</span></label>
+              <label class="diag-radio"><input type="radio" name="avaliacao_situacao" value="Ruim" required><span>Ruim</span></label>
+              <label class="diag-radio"><input type="radio" name="avaliacao_situacao" value="Regular" required><span>Regular</span></label>
+              <label class="diag-radio"><input type="radio" name="avaliacao_situacao" value="Controlada" required><span>Controlada</span></label>
+              <label class="diag-radio"><input type="radio" name="avaliacao_situacao" value="Boa" required><span>Boa</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>2. Qual frase mais se aproxima da sua realidade?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="frase_realidade" value="O dinheiro acaba antes do mês terminar" required><span>O dinheiro acaba antes do mês terminar</span></label>
+              <label class="diag-radio"><input type="radio" name="frase_realidade" value="Vivo sempre no limite" required><span>Vivo sempre no limite</span></label>
+              <label class="diag-radio"><input type="radio" name="frase_realidade" value="Pago as contas, mas não sobra" required><span>Pago as contas, mas não sobra</span></label>
+              <label class="diag-radio"><input type="radio" name="frase_realidade" value="Consigo pagar tudo e poupar um pouco" required><span>Consigo pagar tudo e poupar um pouco</span></label>
+              <label class="diag-radio"><input type="radio" name="frase_realidade" value="Tenho folga financeira" required><span>Tenho folga financeira</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>3. Você sente ansiedade ou culpa ao lidar com dinheiro?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="ansiedade_dinheiro" value="Não" required><span>Não</span></label>
+              <label class="diag-radio"><input type="radio" name="ansiedade_dinheiro" value="Às vezes" required><span>Às vezes</span></label>
+              <label class="diag-radio"><input type="radio" name="ansiedade_dinheiro" value="Frequentemente" required><span>Frequentemente</span></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="diag-card">
+          <h2 class="diag-title">Gastos fixos e estruturais</h2>
+          <div class="diag-field">
+            <label>1. Moradia</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="moradia" value="Aluguel" required><span>Aluguel</span></label>
+              <label class="diag-radio"><input type="radio" name="moradia" value="Financiamento imobiliário" required><span>Financiamento imobiliário</span></label>
+              <label class="diag-radio"><input type="radio" name="moradia" value="Casa própria (sem parcela)" required><span>Casa própria (sem parcela)</span></label>
+              <label class="diag-radio"><input type="radio" name="moradia" value="Outro" required><span>Outro</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>2. Valor mensal da moradia (aluguel/parcela/condomínio se houver) (R$)</label>
+            <input name="valor_moradia" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>3. Veículo</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="veiculo" value="Tenho veículo" required><span>Tenho veículo</span></label>
+              <label class="diag-radio"><input type="radio" name="veiculo" value="Não tenho veículo" required><span>Não tenho veículo</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>4. Financiamento veicular (valor da parcela), se houver (R$)</label>
+            <input name="financiamento_veicular" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>5. Gasto mensal com combustível (R$)</label>
+            <input name="combustivel" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>6. Manutenção média mensal (revisão, consertos, pneus etc.) (R$)</label>
+            <input name="manutencao_veiculo" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>7. Plano de saúde</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="plano_saude" value="Não tenho" required><span>Não tenho</span></label>
+              <label class="diag-radio"><input type="radio" name="plano_saude" value="Tenho" required><span>Tenho</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>8. Valor mensal do plano de saúde (se tiver) (R$)</label>
+            <input name="valor_plano_saude" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>9. Plano odontológico</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="plano_odontologico" value="Não tenho" required><span>Não tenho</span></label>
+              <label class="diag-radio"><input type="radio" name="plano_odontologico" value="Tenho" required><span>Tenho</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>10. Valor mensal do plano odontológico (se tiver) (R$)</label>
+            <input name="valor_plano_odontologico" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>11. Seguro residencial</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="seguro_residencial" value="Não tenho" required><span>Não tenho</span></label>
+              <label class="diag-radio"><input type="radio" name="seguro_residencial" value="Tenho" required><span>Tenho</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>12. Valor mensal do seguro residencial (se tiver) (R$)</label>
+            <input name="valor_seguro_residencial" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>13. Seguro veicular</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="seguro_veicular" value="Não tenho" required><span>Não tenho</span></label>
+              <label class="diag-radio"><input type="radio" name="seguro_veicular" value="Tenho" required><span>Tenho</span></label>
+              <label class="diag-radio"><input type="radio" name="seguro_veicular" value="N/A" required><span>N/A</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>14. Valor mensal do seguro veicular (se tiver) (R$)</label>
+            <input name="valor_seguro_veicular" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>15. Seguro de vida</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="seguro_vida" value="Não tenho" required><span>Não tenho</span></label>
+              <label class="diag-radio"><input type="radio" name="seguro_vida" value="Tenho" required><span>Tenho</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>16. Valor mensal do seguro de vida (se tiver) (R$)</label>
+            <input name="valor_seguro_vida" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>17. Você reserva dinheiro mensalmente para gastos anuais (IPTU, IPVA, matrícula, impostos)?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="reserva_anuais" value="Sim" required><span>Sim</span></label>
+              <label class="diag-radio"><input type="radio" name="reserva_anuais" value="Não" required><span>Não</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>18. Soma total de assinaturas (Netflix, Spotify, academias, clubes, apps) por mês (R$)</label>
+            <input name="assinaturas" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+        </section>
+
+        <section class="diag-card" data-group="dividas">
+          <h2 class="diag-title">Dívidas, crédito e compromissos</h2>
+          <div class="diag-field">
+            <label>1. Que tipo de dívidas ou compromissos financeiros recorrentes você possui atualmente?</label>
+            <div class="diag-help">Marque todas as opções que se aplicam.</div>
+            <div class="diag-options">
+              <label class="diag-check"><input type="checkbox" name="dividas[]" value="Cartão de crédito"><span>Cartão de crédito</span></label>
+              <label class="diag-check"><input type="checkbox" name="dividas[]" value="Cheque especial"><span>Cheque especial</span></label>
+              <label class="diag-check"><input type="checkbox" name="dividas[]" value="Empréstimo pessoal"><span>Empréstimo pessoal</span></label>
+              <label class="diag-check"><input type="checkbox" name="dividas[]" value="Consórcio"><span>Consórcio</span></label>
+              <label class="diag-check"><input type="checkbox" name="dividas[]" value="Financiamento veicular"><span>Financiamento veicular</span></label>
+              <label class="diag-check"><input type="checkbox" name="dividas[]" value="Financiamento imobiliário"><span>Financiamento imobiliário</span></label>
+              <label class="diag-check"><input type="checkbox" name="dividas[]" value="Contas em atraso"><span>Contas em atraso</span></label>
+              <label class="diag-check"><input type="checkbox" name="dividas[]" value="Nenhuma das opções"><span>Nenhuma das opções</span></label>
+            </div>
+            <div class="diag-group-error" id="dividasError"></div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>2. Sobre cartão de crédito: como você paga a fatura?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="cartao_fatura" value="Paga integral" required><span>Paga integral</span></label>
+              <label class="diag-radio"><input type="radio" name="cartao_fatura" value="Paga parcialmente" required><span>Paga parcialmente</span></label>
+              <label class="diag-radio"><input type="radio" name="cartao_fatura" value="Paga apenas o mínimo" required><span>Paga apenas o mínimo</span></label>
+              <label class="diag-radio"><input type="radio" name="cartao_fatura" value="Não uso cartão" required><span>Não uso cartão</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>3. Uso do crédito: com que frequência você usa crédito para manter padrão de vida?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="uso_credito" value="Nunca" required><span>Nunca</span></label>
+              <label class="diag-radio"><input type="radio" name="uso_credito" value="Às vezes" required><span>Às vezes</span></label>
+              <label class="diag-radio"><input type="radio" name="uso_credito" value="Frequentemente" required><span>Frequentemente</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>4. Você sabe exatamente quanto deve no total?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="sabe_total_divida" value="Sim" required><span>Sim</span></label>
+              <label class="diag-radio"><input type="radio" name="sabe_total_divida" value="Não" required><span>Não</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>5. Qual o valor total das parcelas de compras já feitas para os próximos meses? (R$)</label>
+            <input name="parcelas_compras" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>6. Seu nome já esteve ou está negativado?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="nome_negativado" value="Sim" required><span>Sim</span></label>
+              <label class="diag-radio"><input type="radio" name="nome_negativado" value="Não" required><span>Não</span></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="diag-card">
+          <h2 class="diag-title">Organização e controle</h2>
+          <div class="diag-field">
+            <label>1. Você controla seus gastos?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="controle_gastos" value="Sim, regularmente" required><span>Sim, regularmente</span></label>
+              <label class="diag-radio"><input type="radio" name="controle_gastos" value="Às vezes" required><span>Às vezes</span></label>
+              <label class="diag-radio"><input type="radio" name="controle_gastos" value="Não" required><span>Não</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>2. Você sabe quanto gasta por mês com despesas pequenas (café, lanches, apps, lazer)?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="gastos_pequenos" value="Sim" required><span>Sim</span></label>
+              <label class="diag-radio"><input type="radio" name="gastos_pequenos" value="Não" required><span>Não</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>3. Decisão de compra: você costuma...</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="decisao_compra" value="Planejar antes de gastar" required><span>Planejar antes de gastar</span></label>
+              <label class="diag-radio"><input type="radio" name="decisao_compra" value="Decidir na hora" required><span>Decidir na hora</span></label>
+              <label class="diag-radio"><input type="radio" name="decisao_compra" value="Comprar e depois pensar como pagar" required><span>Comprar e depois pensar como pagar</span></label>
+            </div>
+          </div>
+        </section>
+
+        <section class="diag-card" data-group="investimentos">
+          <h2 class="diag-title">Poupança, reserva e investimentos</h2>
+          <div class="diag-field">
+            <label>1. Atualmente, você consegue poupar quanto da sua renda mensal?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="poupar_percentual" value="Nada" required><span>Nada</span></label>
+              <label class="diag-radio"><input type="radio" name="poupar_percentual" value="Até 5%" required><span>Até 5%</span></label>
+              <label class="diag-radio"><input type="radio" name="poupar_percentual" value="Entre 5% e 10%" required><span>Entre 5% e 10%</span></label>
+              <label class="diag-radio"><input type="radio" name="poupar_percentual" value="Entre 10% e 20%" required><span>Entre 10% e 20%</span></label>
+              <label class="diag-radio"><input type="radio" name="poupar_percentual" value="Acima de 20%" required><span>Acima de 20%</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>2. Você possui reserva financeira?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="reserva_financeira" value="Não" required><span>Não</span></label>
+              <label class="diag-radio"><input type="radio" name="reserva_financeira" value="Sim" required><span>Sim</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>3. Se sim, essa reserva equivale a:</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="reserva_equivalencia" value="Menos de 1 mês de despesas" required><span>Menos de 1 mês de despesas</span></label>
+              <label class="diag-radio"><input type="radio" name="reserva_equivalencia" value="1 a 3 meses" required><span>1 a 3 meses</span></label>
+              <label class="diag-radio"><input type="radio" name="reserva_equivalencia" value="Mais de 3 meses" required><span>Mais de 3 meses</span></label>
+              <label class="diag-radio"><input type="radio" name="reserva_equivalencia" value="N/A" required><span>N/A</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>4. Você possui investimentos financeiros?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="investimentos" value="Não" required><span>Não</span></label>
+              <label class="diag-radio"><input type="radio" name="investimentos" value="Sim" required><span>Sim</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>5. Se sim, quais investimentos você possui? (marque)</label>
+            <div class="diag-options">
+              <label class="diag-check"><input type="checkbox" name="investimentos_lista[]" value="Poupança"><span>Poupança</span></label>
+              <label class="diag-check"><input type="checkbox" name="investimentos_lista[]" value="CDB / Renda fixa"><span>CDB / Renda fixa</span></label>
+              <label class="diag-check"><input type="checkbox" name="investimentos_lista[]" value="Fundos"><span>Fundos</span></label>
+              <label class="diag-check"><input type="checkbox" name="investimentos_lista[]" value="Ações"><span>Ações</span></label>
+              <label class="diag-check"><input type="checkbox" name="investimentos_lista[]" value="Outros"><span>Outros</span></label>
+              <label class="diag-check"><input type="checkbox" name="investimentos_lista[]" value="N/A"><span>N/A</span></label>
+            </div>
+            <div class="diag-group-error" id="investimentosError"></div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>6. Você tem consórcio ativo?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="consorcio_ativo" value="Não" required><span>Não</span></label>
+              <label class="diag-radio"><input type="radio" name="consorcio_ativo" value="Sim" required><span>Sim</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>7. Se sim, qual o valor mensal do consórcio? (R$)</label>
+            <input name="valor_consorcio" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>8. Você tem financiamento imobiliário?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="financiamento_imob" value="Não" required><span>Não</span></label>
+              <label class="diag-radio"><input type="radio" name="financiamento_imob" value="Sim" required><span>Sim</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>9. Se sim, qual o valor mensal da parcela do financiamento imobiliário? (R$)</label>
+            <input name="valor_financiamento_imob" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>10. Você tem financiamento veicular?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="financiamento_veiculo" value="Não" required><span>Não</span></label>
+              <label class="diag-radio"><input type="radio" name="financiamento_veiculo" value="Sim" required><span>Sim</span></label>
+              <label class="diag-radio"><input type="radio" name="financiamento_veiculo" value="N/A" required><span>N/A</span></label>
+            </div>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>11. Se sim, qual o valor mensal da parcela do financiamento veicular? (R$)</label>
+            <input name="valor_financiamento_veiculo" type="text" required pattern="(N\/A|0(,00)?|([0-9]{1,3}(\.[0-9]{3})*|[0-9]+),[0-9]{2})" title="Se não se aplica, escreva exatamente: N/A ou 0">
+            <div class="diag-help">Se não se aplica, escreva exatamente: N/A ou 0</div>
+          </div>
+        </section>
+
+        <section class="diag-card">
+          <h2 class="diag-title">Motivação e compromisso</h2>
+          <div class="diag-field">
+            <label>1. O que te fez procurar ajuda agora?</label>
+            <textarea name="motivo_ajuda" required></textarea>
+          </div>
+          <div class="diag-field" style="margin-top:12px;">
+            <label>2. Se nada mudar nos próximos 12 meses, o que pode acontecer?</label>
+            <textarea name="projecao_12m" required></textarea>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>3. Você está disposto(a) a reduzir gastos?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="reduzir_gastos" value="Sim" required><span>Sim</span></label>
+              <label class="diag-radio"><input type="radio" name="reduzir_gastos" value="Parcialmente" required><span>Parcialmente</span></label>
+              <label class="diag-radio"><input type="radio" name="reduzir_gastos" value="Não" required><span>Não</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>4. Você está disposto(a) a mudar hábitos?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="mudar_habitos" value="Sim" required><span>Sim</span></label>
+              <label class="diag-radio"><input type="radio" name="mudar_habitos" value="Parcialmente" required><span>Parcialmente</span></label>
+              <label class="diag-radio"><input type="radio" name="mudar_habitos" value="Não" required><span>Não</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>5. Você está disposto(a) a seguir orientação com disciplina?</label>
+            <div class="diag-options">
+              <label class="diag-radio"><input type="radio" name="seguir_orientacao" value="Sim" required><span>Sim</span></label>
+              <label class="diag-radio"><input type="radio" name="seguir_orientacao" value="Parcialmente" required><span>Parcialmente</span></label>
+              <label class="diag-radio"><input type="radio" name="seguir_orientacao" value="Não" required><span>Não</span></label>
+            </div>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>6. De 0 a 10, qual seu nível de comprometimento com a mudança financeira?</label>
+            <select name="comprometimento" required>
+              <option value="" selected disabled>Selecione</option>
+              <option value="0">Zero</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+
+          <div class="diag-field" style="margin-top:12px;">
+            <label>7. Qual seu principal objetivo financeiro para os próximos 6 meses?</label>
+            <input name="objetivo_6m" type="text" required>
+          </div>
+        </section>
+
+        <div class="diag-card">
+          <div class="diag-actions">
+            <button class="diag-btn primary" type="submit">Enviar diagnóstico</button>
+            <button class="diag-btn ghost" type="button" id="diagClearBottom">Limpar formulário</button>
+          </div>
+          <div id="diagStatus" class="diag-status"></div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <div class="footer-credit">
+    © 2026 Todos os direitos reservados. Desenvolvido por:
+    <a href="https://vektorweb.shop" target="_blank" rel="noopener">
+      <img src="/assets/img/logo-vecto-web.png" alt="Vektor Web">
+    </a>
+  </div>
+
+  <script src="/assets/js/appscript-config.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    (() => {
+      "use strict";
+
+      const form = document.getElementById("diagnosticoForm");
+      const statusEl = document.getElementById("diagStatus");
+      const dividasError = document.getElementById("dividasError");
+      const investimentosError = document.getElementById("investimentosError");
+      const clearTop = document.getElementById("diagClearTop");
+      const clearBottom = document.getElementById("diagClearBottom");
+      const estadoSelect = document.getElementById("estadoSelect");
+      const cidadeInput = document.getElementById("cidadeInput");
+      const cidadeList = document.getElementById("cidadeList");
+      const DIAG_STORAGE_KEY = "cf_diag_v1";
+
+      function hasChecked(name) {
+        return !!document.querySelector(`input[name="${name}"]:checked`);
+      }
+
+      function getLabelText(el) {
+        const field = el.closest(".diag-field");
+        const label = field ? field.querySelector("label") : null;
+        return label ? label.textContent.trim() : "Campo obrigatório";
+      }
+
+      function collectMissingFields() {
+        const missing = [];
+
+        const requiredInputs = Array.from(form.querySelectorAll("input[required], textarea[required], select[required]"));
+        const radioNames = new Set();
+        const checkboxNames = new Set();
+
+        form.querySelectorAll(".diag-field.is-missing").forEach((el) => el.classList.remove("is-missing"));
+
+        requiredInputs.forEach((el) => {
+          if (el.type === "radio") radioNames.add(el.name);
+          else if (el.type === "checkbox") checkboxNames.add(el.name);
+          else {
+            if (!el.value || !el.value.trim()) {
+              const field = el.closest(".diag-field");
+              if (field) field.classList.add("is-missing");
+              missing.push(getLabelText(el));
+            }
+          }
+        });
+
+        radioNames.forEach((name) => {
+          if (!hasChecked(name)) {
+            const el = form.querySelector(`input[name="${name}"]`);
+            const field = el ? el.closest(".diag-field") : null;
+            if (field) field.classList.add("is-missing");
+            if (el) missing.push(getLabelText(el));
+          }
+        });
+
+        checkboxNames.forEach((name) => {
+          if (!hasChecked(name)) {
+            const el = form.querySelector(`input[name="${name}"]`);
+            const field = el ? el.closest(".diag-field") : null;
+            if (field) field.classList.add("is-missing");
+            if (el) missing.push(getLabelText(el));
+          }
+        });
+
+        return Array.from(new Set(missing));
+      }
+
+      function validateGroups() {
+        let ok = true;
+        if (!hasChecked("dividas[]")) {
+          if (dividasError) dividasError.textContent = "Selecione ao menos uma opção.";
+          const field = dividasError?.closest(".diag-field");
+          if (field) field.classList.add("is-missing");
+          ok = false;
+        } else if (dividasError) {
+          dividasError.textContent = "";
+        }
+
+        if (!hasChecked("investimentos_lista[]")) {
+          if (investimentosError) investimentosError.textContent = "Selecione ao menos uma opção (ou N/A).";
+          const field = investimentosError?.closest(".diag-field");
+          if (field) field.classList.add("is-missing");
+          ok = false;
+        } else if (investimentosError) {
+          investimentosError.textContent = "";
+        }
+
+        return ok;
+      }
+
+      function formDataToObject(fd) {
+        const out = {};
+        for (const [key, value] of fd.entries()) {
+          if (key.endsWith("[]")) {
+            const k = key.slice(0, -2);
+            if (!out[k]) out[k] = [];
+            out[k].push(value);
+          } else {
+            out[key] = value;
+          }
+        }
+        return out;
+      }
+
+      function normalizePhone(v) {
+        const d = (v || "").replace(/\D/g, "").slice(0, 11);
+        const p1 = d.slice(0, 2);
+        const p2 = d.slice(2, 7);
+        const p3 = d.slice(7, 11);
+        let out = "";
+        if (p1) out += `(${p1}`;
+        if (p1.length === 2) out += `)`;
+        if (p2) out += p2;
+        if (p3) out += `-${p3}`;
+        return out;
+      }
+
+      function titleCaseFirstLetter(v) {
+        if (!v) return v;
+        const first = v.charAt(0);
+        const rest = v.slice(1);
+        return first.toUpperCase() + rest;
+      }
+
+      function splitFullName(fullName) {
+        const parts = String(fullName || "").trim().split(/\s+/).filter(Boolean);
+        if (!parts.length) return { firstName: "", lastName: "" };
+        if (parts.length === 1) return { firstName: parts[0], lastName: "" };
+        return { firstName: parts[0], lastName: parts.slice(1).join(" ") };
+      }
+
+      function getQuestionLabelByName(name) {
+        const el = form.querySelector(`[name="${name}"], [name="${name}[]"]`);
+        const field = el ? el.closest(".diag-field") : null;
+        const label = field ? field.querySelector("label") : null;
+        return label ? label.textContent.trim() : name;
+      }
+
+      function clearNextFocus() {
+        form.querySelectorAll(".diag-field.nextFocus").forEach((el) => el.classList.remove("nextFocus"));
+      }
+
+      function scrollToNextField(fromField) {
+        const fields = Array.from(form.querySelectorAll(".diag-field"));
+        const idx = fields.indexOf(fromField);
+        for (let i = idx + 1; i < fields.length; i++) {
+          const target = fields[i];
+          if (target) {
+            clearNextFocus();
+            target.classList.add("nextFocus");
+            target.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+          }
+        }
+        clearNextFocus();
+      }
+
+      async function loadCitiesByState(uf) {
+        if (!cidadeList) return;
+        cidadeList.innerHTML = "";
+        if (!uf || uf === "Outro País") return;
+
+        try {
+          const resp = await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`);
+          const data = await resp.json();
+          data.forEach((c) => {
+            const opt = document.createElement("option");
+            opt.value = c.nome;
+            cidadeList.appendChild(opt);
+          });
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      function handleEstadoChange() {
+        const uf = estadoSelect?.value || "";
+        if (!cidadeInput) return;
+
+        if (uf === "Outro País") {
+          cidadeInput.value = "Outro País";
+          cidadeInput.setAttribute("readonly", "readonly");
+          cidadeInput.setAttribute("disabled", "disabled");
+          saveDiagState();
+          return;
+        }
+
+        cidadeInput.removeAttribute("readonly");
+        cidadeInput.removeAttribute("disabled");
+        if (cidadeInput.value === "Outro País") cidadeInput.value = "";
+        loadCitiesByState(uf);
+      }
+
+      function saveDiagState() {
+        if (!form) return;
+        const data = formDataToObject(new FormData(form));
+        localStorage.setItem(DIAG_STORAGE_KEY, JSON.stringify(data));
+      }
+
+      function loadDiagState() {
+        if (!form) return;
+        const raw = localStorage.getItem(DIAG_STORAGE_KEY);
+        if (!raw) return;
+        let data;
+        try { data = JSON.parse(raw); } catch { return; }
+
+        Object.keys(data || {}).forEach((key) => {
+          const value = data[key];
+          if (Array.isArray(value)) {
+            value.forEach((v) => {
+              const el = form.querySelector(`input[name="${key}[]"][value="${v}"]`);
+              if (el) el.checked = true;
+            });
+            return;
+          }
+
+          const radio = form.querySelector(`input[name="${key}"][value="${value}"]`);
+          if (radio && (radio.type === "radio" || radio.type === "checkbox")) {
+            radio.checked = true;
+            return;
+          }
+
+          const field = form.querySelector(`[name="${key}"]`);
+          if (field) field.value = value;
+        });
+
+        if (estadoSelect && estadoSelect.value) {
+          handleEstadoChange();
+        }
+      }
+
+      function clearDiagState() {
+        localStorage.removeItem(DIAG_STORAGE_KEY);
+        form?.reset();
+        if (statusEl) statusEl.textContent = "";
+        if (dividasError) dividasError.textContent = "";
+        if (investimentosError) investimentosError.textContent = "";
+        form?.querySelectorAll(".diag-field.is-missing").forEach((el) => el.classList.remove("is-missing"));
+      }
+
+      if (form) {
+        loadDiagState();
+
+        form.addEventListener("input", (e) => {
+          const field = e.target.closest(".diag-field");
+          if (field) field.classList.remove("is-missing");
+          if (statusEl) statusEl.textContent = "";
+          const t = e.target;
+          if (t && t.name === "telefone") {
+            t.value = normalizePhone(t.value);
+          }
+          if (t && t.tagName === "INPUT" && t.type === "text" && t.name !== "email") {
+            t.value = titleCaseFirstLetter(t.value);
+          }
+          if (t && t.tagName === "TEXTAREA") {
+            t.value = titleCaseFirstLetter(t.value);
+          }
+          saveDiagState();
+        });
+
+        form.addEventListener("change", (e) => {
+          saveDiagState();
+          if (e.target === estadoSelect) handleEstadoChange();
+          const isAuto = e.target.matches("input[type=\"radio\"], input[type=\"checkbox\"], select");
+          if (isAuto) {
+            const field = e.target.closest(".diag-field");
+            if (field) scrollToNextField(field);
+          }
+        });
+
+        clearTop?.addEventListener("click", clearDiagState);
+        clearBottom?.addEventListener("click", clearDiagState);
+
+        estadoSelect?.addEventListener("change", handleEstadoChange);
+
+        form.addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          if (!form.checkValidity() || !validateGroups()) {
+            const missing = collectMissingFields();
+            if (statusEl) {
+              statusEl.textContent = missing.length
+                ? `Responda as perguntas obrigatórias: ${missing.join(" • ")}`
+                : "Responda todas as perguntas obrigatórias.";
+            }
+            form.reportValidity();
+            return;
+          }
+
+          const submitBtn = form.querySelector('button[type="submit"]');
+          if (statusEl) statusEl.textContent = "Enviando...";
+          if (submitBtn) submitBtn.disabled = true;
+
+          try {
+            const APP_SCRIPT_URL = window.APP_SCRIPT_URL || "https://script.google.com/macros/s/SEU_ID/exec";
+            if (!APP_SCRIPT_URL || APP_SCRIPT_URL.includes("SEU_ID")) {
+              throw new Error("APP_SCRIPT_URL não configurada.");
+            }
+
+            const data = formDataToObject(new FormData(form));
+            const nomeCompleto = String(data.nome_completo || "").trim();
+            const { firstName, lastName } = splitFullName(nomeCompleto);
+
+            const answers = Object.keys(data).map((key) => {
+              const value = data[key];
+              const displayValue = Array.isArray(value) ? value.join(", ") : String(value || "");
+              return { question: getQuestionLabelByName(key), value: displayValue };
+            });
+
+            const payload = {
+              lead: {
+                firstName,
+                lastName,
+                email: data.email || "",
+                phone: data.telefone || ""
+              },
+              scores: {},
+              answers
+            };
+
+            window.__diagnosis = payload;
+
+            const resp = await fetch(APP_SCRIPT_URL, {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+            });
+
+            const resText = await resp.text();
+            let resJson = {};
+            try { resJson = JSON.parse(resText || "{}"); } catch { resJson = { raw: resText }; }
+            if (!resp.ok || resJson?.ok === false) {
+              const reason = resJson?.details
+                ? `${resJson?.error || "Erro"}: ${resJson.details}`
+                : (resJson?.error || resJson?.raw || resText || `HTTP ${resp.status}`);
+              throw new Error(reason);
+            }
+
+            if (statusEl) statusEl.textContent = "Diagnóstico enviado com sucesso. Em breve você receberá o próximo passo.";
+            clearDiagState();
+          } catch (err) {
+            if (statusEl) statusEl.textContent = `Falha ao enviar: ${err?.message || "tente novamente."}`;
+            console.error(err);
+          } finally {
+            if (submitBtn) submitBtn.disabled = false;
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

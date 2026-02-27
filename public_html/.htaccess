@@ -1,0 +1,50 @@
+# =========================================================
+# CLINICADEFINANCAS.COM.BR - .htaccess (Hostinger / Apache)
+# Objetivos:
+# 1) Resolver 404 no domínio raiz (redir -> www)
+# 2) Forçar HTTPS
+# 3) Evitar listagem de diretórios
+# 4) Corrigir fallback de index
+# 5) Manter headers de segurança sem quebrar scripts externos
+# =========================================================
+
+# Corrige 403 por index/permissão (fallback de index)
+DirectoryIndex index.html index.php default.php
+
+# Evita listar diretórios
+Options -Indexes
+
+# ---------------------------------------------------------
+# REDIRECTS (coloque no topo para rodar antes de tudo)
+# ---------------------------------------------------------
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.clinicadefinancas\.com\.br$ [NC]
+RewriteRule ^ https://www.clinicadefinancas.com.br%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# ---------------------------------------------------------
+# ACESSO (geralmente não é necessário, mas não atrapalha)
+# ---------------------------------------------------------
+<IfModule mod_authz_core.c>
+  Require all granted
+</IfModule>
+<IfModule mod_access_compat.c>
+  Order allow,deny
+  Allow from all
+</IfModule>
+
+# ---------------------------------------------------------
+# HEADERS DE SEGURANÇA
+# ---------------------------------------------------------
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+
+  # CSP (mais compatível; mantém segurança sem quebrar GTM/Meta/YouTube)
+  # Observação: se você NÃO usa GTM/Meta/Google Analytics, podemos apertar ainda mais.
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; frame-ancestors 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.gstatic.com https://connect.facebook.net; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-src 'self' https://www.youtube.com https://youtube.com; upgrade-insecure-requests"
+</IfModule>

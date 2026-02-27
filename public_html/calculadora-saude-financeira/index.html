@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="icon" href="/assets/img/icone-clinica-de-financas-modo-escuro.png" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" href="/assets/img/icone-clinica-de-financas-modo-claro.png" media="(prefers-color-scheme: light)" />
+  <title>Calculadora de Saúde Financeira | Diagnóstico</title>
+  <meta name="description" content="Faça a Calculadora de Saúde Financeira e receba um diagnóstico claro em poucos minutos." />
+  <link rel="canonical" href="https://clinicadefinancas.com.br/calculadora-saude-financeira/" />
+
+  <meta property="og:title" content="Calculadora de Saúde Financeira" />
+  <meta property="og:description" content="Diagnóstico rápido, sem dados bancários." />
+  <meta property="og:url" content="https://clinicadefinancas.com.br/calculadora-saude-financeira/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://clinicadefinancas.com.br/assets/img/og/calculadora.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '000000000000000');
+    fbq('track', 'PageView');
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-logo">
+        <a href="/home/"><img src="/assets/img/logo-clinica-de-financas.png" alt="Clínica de Finanças"></a>
+      </div>
+
+      <div class="header-links">
+        <nav class="header-nav" aria-label="Menu principal">
+          <a href="/home/">Home</a>
+          <a href="/metodo-saude-financeira/">Método Saúde Financeira</a>
+          <a href="/solucoes/">Soluções</a>
+          <a href="/sobre/">Sobre</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/midia/">Mídia</a>
+          <a href="/contato/">Contato</a>
+        </nav>
+
+        <div class="header-cta">
+          <a href="/calculadora-saude-financeira/" class="btn-calculadora" data-track="cta_calculadora" data-track-label="Header">Calculadora de Saúde Financeira</a>
+        </div>
+
+        <button class="menu-toggle" data-menu-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mobile-nav" data-mobile-nav id="mobile-nav">
+      <div class="mobile-nav__overlay"></div>
+      <div class="mobile-nav__drawer">
+        <nav aria-label="Menu mobile">
+          <a href="/home/">Home</a>
+          <a href="/metodo-saude-financeira/">Método Saúde Financeira</a>
+          <a href="/solucoes/">Soluções</a>
+          <a href="/sobre/">Sobre</a>
+          <a href="/faq/">FAQ</a>
+          <a href="/midia/">Mídia</a>
+          <a href="/contato/">Contato</a>
+          <div class="mobile-nav__cta">
+            <a href="/calculadora-saude-financeira/" class="btn-calculadora" data-track="cta_calculadora" data-track-label="Mobile Menu">Calculadora de Saúde Financeira</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="calc-wrap">
+        <div class="calc-topnote">
+          Responda todas as questões e avalie sua saúde financeira.
+          Não pedimos dados bancários nem informações sigilosas.
+        </div>
+
+        <h1 style="text-align:center;">Diagnóstico de Saúde Financeira</h1>
+        <p class="calc-mini" style="text-align:center;">Responda todas as questões e avalie sua saúde financeira. Não pedimos dados bancários nem informações sigilosas.</p>
+        <p class="calc-mini" style="text-align:center;">Diagnóstico de Saúde Financeira</p>
+        <p class="calc-mini" style="text-align:center;">Ao responder uma questão, o sistema avança automaticamente para a próxima. Ao final, o diagnóstico é enviado para a Clínica de Finanças.</p>
+
+        <div id="formView">
+          <div class="calc-card" id="cardLead" style="width:50%;margin:0 auto;">
+            <div class="badge" style="margin-bottom:10px;">Dados iniciais</div>
+
+            <div class="calc-field">
+                <label>Nome</label>
+                <input id="firstName" type="text" placeholder="Ex.: José" required>
+              </div>
+              <div class="calc-field">
+                <label>Sobrenome</label>
+                <input id="lastName" type="text" placeholder="Ex.: Mário" required>
+              </div>
+              <div class="calc-field">
+                <label>Telefone (com DDD)</label>
+                <input id="phone" type="text" placeholder="(00)00000-0000" required>
+              </div>
+              <div class="calc-field">
+                <label>E-mail</label>
+                <input id="email" type="email" placeholder="seuemail@exemplo.com" required>
+              </div>
+
+            <div class="calc-progress">
+              <div class="calc-mini" style="display:flex;justify-content:space-between;margin-bottom:8px;"><b>Progresso</b> <span id="pTxt">0%</span></div>
+              <div class="calc-bar"><div id="pBar"></div></div>
+            </div>
+
+            <div class="calc-warn" id="leadWarn">Preencha todos os campos corretamente para iniciar o questionário.</div>
+
+            <div class="calc-actions">
+              <button class="calc-btn primary" id="btnStart" type="button">Iniciar questionário</button>
+              <button class="calc-btn ghost" id="btnClearAll" type="button">Limpar tudo</button>
+            </div>
+          </div>
+
+          <div class="calc-card" id="cardQuiz" style="display:none;">
+            <div class="badge" style="margin-bottom:10px;">Parte 01</div>
+
+            <div class="calc-q" id="q1" data-required="1" data-kind="radio">
+              <p class="calc-qTitle"><b>1)</b> Nos últimos 12 meses, qual frase melhor descreve a comparação entre a renda total e os gastos na sua casa?</p>
+              <div class="calc-optGrid">
+                <label class="calc-opt"><input type="radio" name="q1" value="0"><div><b>Gastos muito maiores que a renda</b></div></label>
+                <label class="calc-opt"><input type="radio" name="q1" value="25"><div><b>Gastos um pouco maiores que a renda</b></div></label>
+                <label class="calc-opt"><input type="radio" name="q1" value="50"><div><b>Gastos mais ou menos iguais à renda</b></div></label>
+                <label class="calc-opt"><input type="radio" name="q1" value="75"><div><b>Gastos um pouco menores que a renda</b></div></label>
+                <label class="calc-opt"><input type="radio" name="q1" value="100"><div><b>Gastos muito menores que a renda</b></div></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q2" data-required="1" data-kind="radio" data-dim="seguranca">
+              <p class="calc-qTitle"><b>2)</b> Preocupações com despesas e compromissos financeiros são motivo de estresse na minha casa.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q2" value="100"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q2" value="75"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q2" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q2" value="25"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q2" value="0"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q3" data-required="1" data-kind="radio" data-dim="seguranca">
+              <p class="calc-qTitle"><b>3)</b> Por causa dos compromissos financeiros, o padrão de vida da minha casa foi bastante reduzido.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q3" value="100"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q3" value="75"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q3" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q3" value="25"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q3" value="0"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q4" data-required="1" data-kind="radio" data-dim="seguranca">
+              <p class="calc-qTitle"><b>4)</b> Estou apertado(a) financeiramente.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q4" value="100"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q4" value="75"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q4" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q4" value="25"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q4" value="0"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q5" data-required="1" data-kind="radio" data-dim="habilidade">
+              <p class="calc-qTitle"><b>5)</b> Eu sei tomar decisões financeiras complicadas.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q5" value="0"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q5" value="25"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q5" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q5" value="75"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q5" value="100"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q6" data-required="1" data-kind="radio" data-dim="habilidade">
+              <p class="calc-qTitle"><b>6)</b> Eu sou capaz de reconhecer um bom investimento.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q6" value="0"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q6" value="25"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q6" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q6" value="75"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q6" value="100"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q7" data-required="1" data-kind="radio" data-dim="habilidade">
+              <p class="calc-qTitle"><b>7)</b> Eu sei me informar para tomar decisões financeiras.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q7" value="0"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q7" value="25"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q7" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q7" value="75"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q7" value="100"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q8" data-required="1" data-kind="radio" data-dim="comportamento">
+              <p class="calc-qTitle"><b>8)</b> Eu sei como me controlar para não gastar muito.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q8" value="0"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q8" value="25"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q8" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q8" value="75"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q8" value="100"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q9" data-required="1" data-kind="radio" data-dim="comportamento">
+              <p class="calc-qTitle"><b>9)</b> Eu sei como me obrigar a poupar.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q9" value="0"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q9" value="25"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q9" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q9" value="75"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q9" value="100"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q10" data-required="1" data-kind="radio" data-dim="comportamento">
+              <p class="calc-qTitle"><b>10)</b> Eu sei como me obrigar a cumprir minhas metas financeiras.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q10" value="0"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q10" value="25"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q10" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q10" value="75"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q10" value="100"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q11" data-required="1" data-kind="radio" data-dim="liberdade">
+              <p class="calc-qTitle"><b>11)</b> Estou garantindo meu futuro financeiro.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q11" value="0"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q11" value="25"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q11" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q11" value="75"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q11" value="100"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q12" data-required="1" data-kind="radio" data-dim="liberdade">
+              <p class="calc-qTitle"><b>12)</b> O jeito que eu cuido do meu dinheiro me permite aproveitar a vida.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q12" value="0"><span>Nada</span></label>
+                <label class="calc-tick"><input type="radio" name="q12" value="25"><span>Pouco</span></label>
+                <label class="calc-tick"><input type="radio" name="q12" value="50"><span>Mais ou menos</span></label>
+                <label class="calc-tick"><input type="radio" name="q12" value="75"><span>Muito</span></label>
+                <label class="calc-tick"><input type="radio" name="q12" value="100"><span>Totalmente</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q13" data-required="1" data-kind="radio" data-dim="habilidade">
+              <p class="calc-qTitle"><b>13)</b> Eu consigo perceber quando me falta informação para tomar uma boa decisão sobre o meu dinheiro.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q13" value="0"><span>Nunca</span></label>
+                <label class="calc-tick"><input type="radio" name="q13" value="25"><span>Raramente</span></label>
+                <label class="calc-tick"><input type="radio" name="q13" value="50"><span>Às vezes</span></label>
+                <label class="calc-tick"><input type="radio" name="q13" value="75"><span>Frequentemente</span></label>
+                <label class="calc-tick"><input type="radio" name="q13" value="100"><span>Sempre</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q14" data-required="1" data-kind="radio" data-dim="seguranca">
+              <p class="calc-qTitle"><b>14)</b> Eu consigo perceber quando não estou cuidando bem do meu dinheiro.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q14" value="0"><span>Nunca</span></label>
+                <label class="calc-tick"><input type="radio" name="q14" value="25"><span>Raramente</span></label>
+                <label class="calc-tick"><input type="radio" name="q14" value="50"><span>Às vezes</span></label>
+                <label class="calc-tick"><input type="radio" name="q14" value="75"><span>Frequentemente</span></label>
+                <label class="calc-tick"><input type="radio" name="q14" value="100"><span>Sempre</span></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q15" data-required="1" data-kind="radio" data-dim="comportamento">
+              <p class="calc-qTitle"><b>15)</b> Eu consigo perceber quando as contas estão saindo do controle.</p>
+              <div class="calc-scale">
+                <label class="calc-tick"><input type="radio" name="q15" value="0"><span>Nunca</span></label>
+                <label class="calc-tick"><input type="radio" name="q15" value="25"><span>Raramente</span></label>
+                <label class="calc-tick"><input type="radio" name="q15" value="50"><span>Às vezes</span></label>
+                <label class="calc-tick"><input type="radio" name="q15" value="75"><span>Frequentemente</span></label>
+                <label class="calc-tick"><input type="radio" name="q15" value="100"><span>Sempre</span></label>
+              </div>
+            </div>
+
+            <div class="badge" style="margin:18px 0 10px;">Parte 02</div>
+
+            <div class="calc-q" id="q16" data-required="1" data-kind="radio">
+              <p class="calc-qTitle"><b>16)</b> Qual é, aproximadamente, a renda total por mês (família)?</p>
+              <div class="calc-optGrid">
+                <label class="calc-opt"><input type="radio" name="income" value="ate_1412"><div><b>Até R$ 1.412</b></div></label>
+                <label class="calc-opt"><input type="radio" name="income" value="1413_2824"><div><b>De R$ 1.413 até R$ 2.824</b></div></label>
+                <label class="calc-opt"><input type="radio" name="income" value="2825_4236"><div><b>De R$ 2.825 até R$ 4.236</b></div></label>
+                <label class="calc-opt"><input type="radio" name="income" value="4237_7060"><div><b>De R$ 4.237 até R$ 7.060</b></div></label>
+                <label class="calc-opt"><input type="radio" name="income" value="7061_14120"><div><b>De R$ 7.061 até R$ 14.120</b></div></label>
+                <label class="calc-opt"><input type="radio" name="income" value="14121_28240"><div><b>De R$ 14.121 até R$ 28.240</b></div></label>
+                <label class="calc-opt"><input type="radio" name="income" value="acima_28240"><div><b>Acima de R$ 28.240</b></div></label>
+              </div>
+            </div>
+
+            <div class="calc-q" id="q17" data-required="1" data-kind="radio">
+              <p class="calc-qTitle"><b>17)</b> Qual é o seu grau de instrução?</p>
+              <div class="calc-optGrid">
+                <label class="calc-opt"><input type="radio" name="edu" value="analfabeto_f1i"><div><b>Analfabeto / Fundamental 1 Incompleto</b></div></label>
+                <label class="calc-opt"><input type="radio" name="edu" value="f1c_f2i"><div><b>Fundamental 1 Completo / Fundamental 2 Incompleto</b></div></label>
+                <label class="calc-opt"><input type="radio" name="edu" value="f2c_mi"><div><b>Fundamental 2 Completo / Médio Incompleto</b></div></label>
+                <label class="calc-opt"><input type="radio" name="edu" value="mc_si"><div><b>Médio Completo / Superior Incompleto</b></div></label>
+                <label class="calc-opt"><input type="radio" name="edu" value="sc"><div><b>Superior Completo</b></div></label>
+                <label class="calc-opt"><input type="radio" name="edu" value="pg"><div><b>Pós-Graduação Completa</b></div></label>
+              </div>
+            </div>
+
+            <div class="calc-warn" id="quizWarn">Responda todas as perguntas obrigatórias antes de ver o resultado.</div>
+
+            <div class="calc-actions">
+              <button class="calc-btn primary" id="btnFinish" type="button">Finalizar e ver diagnóstico</button>
+              <button class="calc-btn ghost" id="btnBackLead" type="button">Voltar aos dados</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="resultView" class="calc-card" style="display:none;">
+          <div class="badge" style="margin:10px auto;text-align:center;font-size:24px;background:linear-gradient(90deg, #1EC6FF, #6A5CFF);color:#fff;border:none;display:block;width:fit-content;">Resultado do diagnóstico</div>
+
+          <div class="calc-resultTop">
+            <div>
+              <span class="calc-pill" id="clsPill">Classificação</span>
+              <div class="calc-scoreNum"><span id="overallScore">0</span></div>
+
+              <div class="calc-bar2">
+                <div class="calc-avgLine" id="avgLineOverall" aria-hidden="true"></div>
+                <div id="overallBar2"></div>
+              </div>
+
+              <div class="calc-avgLegend">
+                <span class="calc-avgDot" aria-hidden="true"></span>
+                <span>Média brasileira: <b><span id="avgOverallTxt">—</span></b> | Sua pontuação: <b><span id="youOverallTxt">—</span></b></span>
+              </div>
+
+              <p class="calc-mini" id="overallDesc" style="margin-top:10px;"></p>
+              <div class="calc-hintBox" id="nextStep"></div>
+              <p class="calc-mini" id="mailStatus" style="margin-top:8px;"></p>
+            </div>
+
+            <div>
+              <div class="calc-actions">
+                <button class="calc-btn ghost" id="btnBackQuiz" type="button">Voltar ao questionário</button>
+                <button class="calc-btn primary" id="btnRestart" type="button">Novo diagnóstico</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="calc-dimGrid">
+            <div class="calc-dimCard">
+              <div class="calc-dimHead"><b>Habilidade</b><span><span id="dHab">0</span>/100</span></div>
+              <div class="calc-bar2" style="margin-top:10px;">
+                <div class="calc-avgLine" id="avgLineHab" aria-hidden="true"></div>
+                <div id="bHab"></div>
+              </div>
+              <div class="calc-avgLegend">
+                <span class="calc-avgDot" aria-hidden="true"></span>
+                <span>Média brasileira: <b><span id="avgHabTxt">—</span></b> | Sua pontuação: <b><span id="youHabTxt">—</span></b></span>
+              </div>
+              <p class="calc-mini" style="margin-top:10px;">Entendimento e tomada de decisão.</p>
+            </div>
+
+            <div class="calc-dimCard">
+              <div class="calc-dimHead"><b>Comportamento</b><span><span id="dComp">0</span>/100</span></div>
+              <div class="calc-bar2" style="margin-top:10px;">
+                <div class="calc-avgLine" id="avgLineComp" aria-hidden="true"></div>
+                <div id="bComp"></div>
+              </div>
+              <div class="calc-avgLegend">
+                <span class="calc-avgDot" aria-hidden="true"></span>
+                <span>Média brasileira: <b><span id="avgCompTxt">—</span></b> | Sua pontuação: <b><span id="youCompTxt">—</span></b></span>
+              </div>
+              <p class="calc-mini" style="margin-top:10px;">Disciplina e execução.</p>
+            </div>
+
+            <div class="calc-dimCard">
+              <div class="calc-dimHead"><b>Segurança</b><span><span id="dSeg">0</span>/100</span></div>
+              <div class="calc-bar2" style="margin-top:10px;">
+                <div class="calc-avgLine" id="avgLineSeg" aria-hidden="true"></div>
+                <div id="bSeg"></div>
+              </div>
+              <div class="calc-avgLegend">
+                <span class="calc-avgDot" aria-hidden="true"></span>
+                <span>Média brasileira: <b><span id="avgSegTxt">—</span></b> | Sua pontuação: <b><span id="youSegTxt">—</span></b></span>
+              </div>
+              <p class="calc-mini" style="margin-top:10px;">Pressão/estresse e estabilidade atual.</p>
+            </div>
+
+            <div class="calc-dimCard">
+              <div class="calc-dimHead"><b>Liberdade</b><span><span id="dLib">0</span>/100</span></div>
+              <div class="calc-bar2" style="margin-top:10px;">
+                <div class="calc-avgLine" id="avgLineLib" aria-hidden="true"></div>
+                <div id="bLib"></div>
+              </div>
+              <div class="calc-avgLegend">
+                <span class="calc-avgDot" aria-hidden="true"></span>
+                <span>Média brasileira: <b><span id="avgLibTxt">—</span></b> | Sua pontuação: <b><span id="youLibTxt">—</span></b></span>
+              </div>
+              <p class="calc-mini" style="margin-top:10px;">Folga, escolhas e futuro.</p>
+            </div>
+          </div>
+
+          <div class="calc-nextAction" aria-label="Próximo passo">
+            <div class="nextLabel">Próximo passo:</div>
+            <a class="calc-nextBtn" href="https://clinicadefinancas.com.br/diagnostico/" data-track="calc_next_step" data-track-label="Diagnóstico Financeiro">DIAGNÓSTICO FINANCEIRO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer-credit">
+    © 2026 Todos os direitos reservados. Desenvolvido por:
+    <a href="https://vektorweb.shop" target="_blank" rel="noopener">
+      <img src="/assets/img/logo-vecto-web.png" alt="Vektor Web">
+    </a>
+  </div>
+
+  <script src="/assets/js/appscript-config.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
