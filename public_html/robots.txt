@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /indexes/
 
 Sitemap: https://clinicadefinancas.com.br/sitemap.xml
